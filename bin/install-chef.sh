@@ -17,7 +17,7 @@ fi
  
 #----------------Running update and upgrade -------------------------
 sudo apt-get -y update
-#sudo apt-get -y upgrade
+sudo apt-get -y upgrade
 
 
 #----------------Installing build-essential & lib packages-----------
