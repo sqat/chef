@@ -1,0 +1,22 @@
+{
+  "id": "production",
+  "prefix": "prd",  //This is a prefix used for naming vms in this environment. 
+  "nodes": {
+    "rotate": [   // All the vms created in this group will be created across multiple datastores equally in a round robin fashion. So, even if one storage volume goes down, other will be up and running. 
+      {
+        "name": "selenium-win8-node", // create 4 vms for selenium-win8-node role , The vms in this group will be named as prd-selenium-win8-node-1.tnt10-zone1.aus1
+        "capacity": 4
+      },
+      {
+        "name": "selenium-win7-node", // create 4 vms for selenium-win7-node role , The vms in this group will be named as prd-selenium-win7-node-1.tnt10-zone1.aus1
+        "capacity": 4
+      }
+    ],
+    "volume1": [     //create two vms on volume1 datastore.
+      "test-vol-1"  //create one vm for test1, vm will be named as mir-mongo-master.tntX-zone1.aus1      
+    ],
+    "volume2": [    //create 3 vms on volume2 datastore.
+      "test-vol-2"
+    ]
+  }
+}

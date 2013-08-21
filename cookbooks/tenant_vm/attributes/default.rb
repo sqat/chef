@@ -1,0 +1,17 @@
+default[:environments]=["tools"]
+default[:volumes]=["volume1","volume2"]
+default[:vcenter][:host]= "vcenter1.op-zone1.aus1"
+default[:vcenter][:user]= "AD\\Tenant13"
+default[:vcenter][:password]="changemenow!"
+default[:vcenter][:dc] ="MP1"
+default[:vcenter][:insecure] = true
+default[:vcenter][:port]=443
+default[:vcenter][:resource_pool]="DRS01/tenant13"
+default[:vcenter][:path]="/sdk"
+default[:tenant][:name]="tenant13"
+default[:tenant][:domain]="tnt13-zone1.aus1"
+default[:tenant][:spec]="tnt13-spec"
+default[:tenant][:template]="template-ubuntu-12.04-25gig-tnt13"
+default[:tenant][:datastores][:volume1]= "ea29-p2k18-fs01-tnt13"
+default[:tenant][:datastores][:volume2]= "ea29-p2k2-fs02-tnt13"
+default[:vm][:clone_in_background]="true"

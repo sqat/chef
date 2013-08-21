@@ -1,0 +1,16 @@
+{
+  "id": "staging",
+  "prefix": "qa",
+  "nodes": {
+    "rotate": [
+      {
+        "name": "selenium-win8-node",
+        "capacity": 3
+      },
+      {
+        "name": "selenium-win7-node",
+        "capacity": 3
+      }
+    ]    
+  }
+}

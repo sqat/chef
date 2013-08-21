@@ -1,0 +1,46 @@
+ //sample tenant configuration 
+    {
+  "id": "config",
+  "environments": [  // This is your list of environments
+    "tools",
+    "staging",
+    "mirror",
+    "production"
+  ],
+  "volumes": [  //don't change this unless you have more than 2 volumes/datastores in your tenant.
+    "volume1",
+    "volume2",
+    "rotate"
+  ],
+  "vcenter": {
+    "host": "vcenter1.op-zone1.aus1",  //austin vcenter host, if you use sfo vcenter change this
+    "user": "",   //tenant user   
+    "password": "",   //tenant password
+    "dc": "MP1",  // if you use SFO tenant, make sure vcenter data center is updated. 
+    "insecure": "true", 
+    "port": "443", 
+    "resource_pool": "DRS01/tenant10", // Change this as per your Tenant id.
+    "path": "/sdk"
+  },
+  "tenant": {
+    "name": "tenant10", //tenant name
+    "domain": "tnt10-zone1.aus1", //tenant domain
+    "spec": "devbox-custom-spec", //name of customization spec saved in vcenter
+    "template": "template-ubuntu-12.04-25gig-tnt10", //name of the ubuntu template in your tenant. Change it as this refers to tntX.
+    "datastores": { //copy this volumes from vcenter datastore list. Login to vcenter and type Ctrl+Shift+D will show datastore list. 
+      "volume1": "ea29-p2k21-fs01-tnt10", 
+      "volume2": "ea29-p2k16-fs02-tnt10"
+    }
+  },
+  "options": {
+    "clone_in_background": true,   // Leave this as true, This will clone the Vms in background. Monitor vcenter for progress.
+    "power_on_vms": false,     // If this flag is true, this recipe will power on the vms after cloning is completed. 
+    "try_vmware_tools_configuration": false, //DO NOT ENABLE THIS, USE IT AT YOUR OWN RISK - This is not thoroughly tested. This will try to configure vmware tools on newly created vm so that customization spec will be triggered.  If it is false, then you need to manually boot the guest os in VM and reboot it. 
+    "configure_vms_in_chef": false, //If this flag is true, then chef recipe will create environments, nodes, roles on chef server
+    "register_vms_as_clients": false //If this flag is true, then chef recipe will ssh to newly created vm and run "sudo -i chef-client" so that newly created VM will be created as a client in chef server. 
+  },
+  "chef_ssh_credentials": { // These credentials will be used by configure recipe to login to vm and run "sudo -i chef-client" so that client can be registered on chef server.
+    "username": "gatadi",
+    "identity_key": "/home/gatadi/.ssh/id_rsa"
+  }
+  }

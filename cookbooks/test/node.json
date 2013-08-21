@@ -1,0 +1,77 @@
+{
+    "run_list" : [ 
+        "recipe[test]"
+    ],
+    "node_name"  : "localhost",
+    "system" : {
+      "user" : "gatadi",
+      "owner" : "gatadi",
+      "host" : "devbox2",
+      "email" : "vijay.gatadi@hp.com"
+    },
+    
+    "p4settings" : {
+      "P4PORT" : "op1-sfdeploy2.mah3.sfo2.snapfish.com:1666",
+      "P4CLIENT" : "devbox2.tnt13-zone1.aus1",
+      "P4USER" : "gatadi",
+      "P4MERGE" : "/usr/bin/p4merge"
+    },
+    
+    "db" : {
+      "DB_HOST" : "qadbprd1.qaglobal.snapfish.com",
+      "DB_PORT" : "1521",      
+      "DB_NODEID" : "QAPRD1",
+      "DB_SID" : "QAPRD1",
+      "DB_USER" : "stg8",
+      "DB_PAC_HOST" : "qadbpac1.qaglobal.snapfish.com",
+      "DB_PAC_PORT" : "1521",      
+      "DB_PAC_NODEID" : "QAPAC1A",
+      "DB_PAC_SID" : "qapac1"
+    },
+    
+    "ldap" : {
+      "LDAP_USER" : "gatadi"
+    },
+
+    "ivy" : {
+       "REPO_SERVER" : "op2-ivy1.hpd5.aus1.snapfish.com",
+       "IVY_PORT" : "7443"
+    },
+    
+    "ant" :{
+       "ANT_PROXY" : ""
+    },
+    
+    "home" : "/home/gatadi",  
+    "workspace" : "/snapfish",
+    "temp" : "/home/gatadi/Temp",
+    "binaries_folder" : "/home/gatadi/workarea/softwares",
+    
+    
+    
+    
+    
+    "binaries" : {
+      "jdk1_6_0" : "jdk-6u43-linux-x64.bin",
+      "apache_ant" : "apache-ant-1.9.0-bin.tar.gz",
+      "apache_ivy" : "apache-ivy-2.3.0-bin.zip",
+      "instantclient_basic" : "instantclient-basic-linux.x64-11.2.0.3.0.zip",
+      "instantclient_sqlplus" : "instantclient-sqlplus-linux.x64-11.2.0.3.0.zip",
+      "sfservice" : "sfservice_2.1.0-3_all.deb",
+      "perforce" : "p4v.tgz"
+    },
+
+    "programs" : "/programs",
+    "ant_lib" : "/.ant/lib",
+    "branch" : "/integration",
+    "apps" : "/apps",
+
+    "apache_conf" : "/etc/apache2/apache2.conf",
+    
+    "apache_ant" : "/apache-ant-1.9.0",
+    "apache_ivy" : "/apache-ivy-2.3.0",
+    "instantclient" : "/instantclient_11_2",
+    "perforce" : "/perforce",
+    "sfbuild" : "/.sfbuild",
+    "apache_ivy_jar" : "ivy-2.3.0.jar"    
+}
