@@ -1,4 +1,4 @@
-default[:home] = "/home"
+default[:home] = "/home/tenant10"
 
 default[:system][:user] = "tenant10"
 default[:system][:owner] = "tenant10"

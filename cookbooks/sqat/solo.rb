@@ -1,5 +1,5 @@
 
-  file_cache_path "/root/Temp"
-  cookbook_path "/root/workarea/chef/cookbooks"
-  json_attribs "/root/workarea/chef/cookbooks/sqat/node.json"
+  file_cache_path "/home/tenant10/Temp"
+  cookbook_path "/home/tenant10/workarea/chef/cookbooks"
+  json_attribs "/home/tenant10/workarea/chef/cookbooks/sqat/node.json"
 
