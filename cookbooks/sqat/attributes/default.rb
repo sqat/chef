@@ -16,7 +16,7 @@ default[:ldap][:LDAP_PASSWD] = "your-ldap-password"
 
 default[:temp] = "/Temp"
 default[:binaries_folder] = "/workarea/softwares"
-default[:workspace] = "/sqat"
+default[:workspace] = "/opt/usr/apps/sqat"
 default[:programs] = "/programs"
 default[:ant_lib] = "/.ant/lib"
 default[:branch] = "/integration"
