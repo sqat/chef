@@ -21,7 +21,7 @@ directory "#{node[:home]}#{node[:programs]}" do
   action :create
 end
 
-directory "#{node[:home]}#{node[:programs]}/bin" do
+directory "#{node[:home]}#{node[:programs]}#{node[:perforce]}/bin" do
   owner "#{node[:system][:owner]}"
   mode "0775"
   recursive true
