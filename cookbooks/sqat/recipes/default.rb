@@ -14,6 +14,20 @@ execute "-- Installing JDK" do
 end
 
 ################## Set-up Perforce  #############################
+directory "#{node[:home]}#{node[:programs]}" do
+  owner "#{node[:system][:owner]}"
+  mode "0775"
+  recursive true
+  action :create
+end
+
+directory "#{node[:home]}#{node[:programs]}/bin" do
+  owner "#{node[:system][:owner]}"
+  mode "0775"
+  recursive true
+  action :create
+end
+
 cookbook_file "#{node[:home]}#{node[:programs]}#{node[:perforce]}/bin/p4" do
   owner "#{node[:system][:owner]}"
   mode "0755"
