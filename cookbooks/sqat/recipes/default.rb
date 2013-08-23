@@ -7,7 +7,7 @@ directory "#{node[:home]}#{node[:programs]}" do
 end
 
 execute "-- Installing JDK" do
-  user "tenant10"
+  user "#{node[:system][:owner]}"  
   cwd "#{node[:home]}#{node[:programs]}"
   command "#{node[:home]}#{node[:binaries_folder]}/#{node[:binaries][:jdk1_6_0]} && date > #{node[:home]}/.jdk_installed"
   not_if { ::File.exists?("#{node[:home]}/.jdk_installed")}
@@ -21,6 +21,13 @@ directory "#{node[:home]}#{node[:programs]}" do
   action :create
 end
 
+directory "#{node[:home]}#{node[:programs]}#{node[:perforce]}" do
+  owner "#{node[:system][:owner]}"
+  mode "0775"
+  recursive true
+  action :create
+end
+
 directory "#{node[:home]}#{node[:programs]}#{node[:perforce]}/bin" do
   owner "#{node[:system][:owner]}"
   mode "0775"
@@ -28,14 +35,24 @@ directory "#{node[:home]}#{node[:programs]}#{node[:perforce]}/bin" do
   action :create
 end
 
+
 cookbook_file "#{node[:home]}#{node[:programs]}#{node[:perforce]}/bin/p4" do
   owner "#{node[:system][:owner]}"
+  user "#{node[:system][:owner]}"
   mode "0755"
   source "p4"
 end
 
+directory "#{node[:home]}#{node[:workspace]}" do
+  owner "#{node[:system][:owner]}"
+  mode "0775"
+  recursive true
+  action :create
+end
+
 template "#{node[:home]}#{node[:workspace]}/p4client" do
   owner "#{node[:system][:owner]}"
+  user "#{node[:system][:owner]}"
   mode "0644"
   source "p4client.erb"
   variables(
@@ -47,15 +64,9 @@ template "#{node[:home]}#{node[:workspace]}/p4client" do
 end
 
 ################## Set-up workspace  #############################
-directory "#{node[:home]}#{node[:workspace]}" do
-  owner "#{node[:system][:owner]}"
-  mode "0775"
-  recursive true
-  action :create
-end
-
 template "#{node[:home]}/.bashrc" do
   owner "#{node[:system][:owner]}"
+  user "#{node[:system][:owner]}"
   mode "0644"
   source "bashrc.erb"
   variables(
