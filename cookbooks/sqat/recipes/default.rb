@@ -1,6 +1,33 @@
 require 'socket'
-node.default["system"]["host"]=Socket.gethostname
-node.default["p4settings"]["P4CLIENT"]=Socket.gethostname+".tnt10"
+host=Socket.gethostname
+node.default["system"]["host"]=host
+node.default["p4settings"]["P4CLIENT"]=host+".tnt10"
+temp=[]
+host.split(/\-/).each {|element| temp << element.sub(/\d+/,'') unless element.sub(/\d+/,'')=="sqat" || element.sub(/\d+/,'')==""}
+
+puts host
+
+node.default["p4settings"]["SERVICE"]=case temp[0]
+when "i18n"
+ "I18N"
+when "wg"
+ "Walgreens"
+when "wm"
+ "Walmart"
+else
+ temp[0]
+end
+
+node.default["p4settings"]["BRANCH"]=case temp[1]
+when "integ"
+"Integration"
+when "reg"
+"Regression"
+when "mir"
+"Mirror"
+else
+temp[1]
+end
 
 directory "#{node[:home]}#{node[:programs]}" do
   owner "#{node[:system][:owner]}"
@@ -62,7 +89,9 @@ template "#{node[:workspace]}/p4client.txt" do
     :P4CLIENT => node[:p4settings][:P4CLIENT],
     :WORKSPACE => "#{node[:workspace]}",
     :P4USER => node[:p4settings][:P4USER],
-    :HOST => "#{node[:system][:host]}"
+    :HOST => "#{node[:system][:host]}",
+    :SERVICE => node["p4settings"]["SERVICE"],
+    :BRANCH => node["p4settings"]["BRANCH"]
   )
 end
 
@@ -95,8 +124,8 @@ ruby_block "p4login" do
   p4.client="#{node[:p4settings][:P4CLIENT]}"
   begin
    p4.run_sync
-  rescue
-   puts "Files up to date"
+  rescue => e
+   puts e
   end
 
  end
