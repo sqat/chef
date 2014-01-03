@@ -1,33 +1,11 @@
+#new reciepe
 require 'socket'
 host=Socket.gethostname
 node.default["system"]["host"]=host
 node.default["p4settings"]["P4CLIENT"]=host+".tnt10"
-temp=[]
-host.split(/\-/).each {|element| temp << element.sub(/\d+/,'') unless element.sub(/\d+/,'')=="sqat" || element.sub(/\d+/,'')==""}
-
-puts host
-
-node.default["p4settings"]["SERVICE"]=case temp[0]
-when "i18n"
- "I18N"
-when "wg"
- "Walgreens"
-when "wm"
- "Walmart"
-else
- temp[0]
-end
-
-node.default["p4settings"]["BRANCH"]=case temp[1]
-when "integ"
-"Integration"
-when "reg"
-"Regression"
-when "mir"
-"Mirror"
-else
-temp[1]
-end
+elements=host.split(/\-/)
+workarea=elements[1]
+puts "host: #{host},workarea: #{workarea}"
 
 directory "#{node[:home]}#{node[:programs]}" do
   owner "#{node[:system][:owner]}"
@@ -80,22 +58,8 @@ directory "#{node[:workspace]}" do
   action :create
 end
 
-template "#{node[:workspace]}/p4client.txt" do
-  owner "#{node[:system][:owner]}"
-  user "#{node[:system][:owner]}"
-  mode "0644"
-  source "p4client.erb"
-  variables(
-    :P4CLIENT => node[:p4settings][:P4CLIENT],
-    :WORKSPACE => "#{node[:workspace]}",
-    :P4USER => node[:p4settings][:P4USER],
-    :HOST => "#{node[:system][:host]}",
-    :SERVICE => node["p4settings"]["SERVICE"],
-    :BRANCH => node["p4settings"]["BRANCH"]
-  )
-end
-
 ################## Set-up workspace  #############################
+puts "home---:#{node[:home]}"
 template "#{node[:home]}/.bashrc" do
   owner "#{node[:system][:owner]}"
   user "#{node[:system][:owner]}"
@@ -105,6 +69,58 @@ template "#{node[:home]}/.bashrc" do
     :P4CLIENT => node[:p4settings][:P4CLIENT]
   )
 end
+
+############## set up p4client ###################################
+
+if workarea.eql?("snapfish")
+  puts "picking snapfish_p4client"
+
+  template "#{node[:workspace]}/p4client.txt" do
+  owner "#{node[:system][:owner]}"
+  user "#{node[:system][:owner]}"
+  mode "0644"
+  source "snapfish_p4client.erb"
+  variables(
+    :P4CLIENT => node[:p4settings][:P4CLIENT],
+    :WORKSPACE => "#{node[:workspace]}",
+    :P4USER => node[:p4settings][:P4USER],
+    :HOST => "#{node[:system][:host]}",
+  )
+end
+elsif workarea.eql?("walmart") 
+  puts "picking walmart_p4client"
+
+  template "#{node[:workspace]}/p4client.txt" do
+  owner "#{node[:system][:owner]}"
+  user "#{node[:system][:owner]}"
+  mode "0644"
+  source "walmart_p4client.erb"
+  variables(
+    :P4CLIENT => node[:p4settings][:P4CLIENT],
+    :WORKSPACE => "#{node[:workspace]}",
+    :P4USER => node[:p4settings][:P4USER],
+    :HOST => "#{node[:system][:host]}",
+  )
+end  
+elsif workarea.eql?("walgreens") 
+  puts "picking walgreens_p4client"
+
+  template "#{node[:workspace]}/p4client.txt" do
+  owner "#{node[:system][:owner]}"
+  user "#{node[:system][:owner]}"
+  mode "0644"
+  source "walgreens_p4client.erb"
+  variables(
+    :P4CLIENT => node[:p4settings][:P4CLIENT],
+    :WORKSPACE => "#{node[:workspace]}",
+    :P4USER => node[:p4settings][:P4USER],
+    :HOST => "#{node[:system][:host]}",
+  )
+end 
+else
+  puts "No p4client template taken" 
+end
+
 
 ruby_block "p4login" do
  block do
@@ -137,3 +153,5 @@ code <<-EOH
  cp /root/.p4tickets /home/tenant10/.p4tickets
 EOH
 end
+
+
