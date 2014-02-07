@@ -2,7 +2,7 @@
 require 'socket'
 host=Socket.gethostname
 node.default["system"]["host"]=host
-node.default["p4settings"]["P4CLIENT"]=host+".tnt10"
+node.default["p4settings"]["P4CLIENT"]=host+".tnt26"
 elements=host.split(/\-/)
 workarea=elements[1]
 puts "host: #{host},workarea: #{workarea}"
@@ -13,14 +13,14 @@ directory "#{node[:home]}#{node[:programs]}" do
   recursive true
   action :create
 end
-
+=begin
 execute "-- Installing JDK" do
   user "#{node[:system][:owner]}"  
   cwd "#{node[:home]}#{node[:programs]}"
   command "#{node[:home]}#{node[:binaries_folder]}/#{node[:binaries][:jdk1_6_0]} && date > #{node[:home]}/.jdk_installed"
   not_if { ::File.exists?("#{node[:home]}/.jdk_installed")}
 end
-
+=end
 ################## Set-up Perforce  #############################
 directory "#{node[:home]}#{node[:programs]}" do
   owner "#{node[:system][:owner]}"
@@ -117,6 +117,22 @@ elsif workarea.eql?("walgreens")
     :HOST => "#{node[:system][:host]}",
   )
 end 
+elsif workarea.eql?("grid")
+  puts "picking grid_p4client"
+
+  template "#{node[:workspace]}/p4client.txt" do
+  owner "#{node[:system][:owner]}"
+  user "#{node[:system][:owner]}"
+  mode "0644"
+  source "grid_p4client.erb"
+  variables(
+    :P4CLIENT => node[:p4settings][:P4CLIENT],
+    :WORKSPACE => "#{node[:workspace]}",
+    :P4USER => node[:p4settings][:P4USER],
+    :HOST => "#{node[:system][:host]}",
+  )
+end
+
 else
   puts "No p4client template taken" 
 end
@@ -150,7 +166,7 @@ end
 script "copy p4 ticket" do
 interpreter "bash"
 code <<-EOH
- cp /root/.p4tickets /home/tenant10/.p4tickets
+ cp /root/.p4tickets /home/sqat/.p4tickets
 EOH
 end
 

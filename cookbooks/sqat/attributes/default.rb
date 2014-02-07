@@ -1,7 +1,7 @@
-default[:home] = "/home/tenant10"
+default[:home] = "/home/sqat"
 
-default[:system][:user] = "tenant10"
-default[:system][:owner] = "tenant10"
+default[:system][:user] = "sqat"
+default[:system][:owner] = "sqat"
 #default[:system][:host] = "sqat-core-sotfservice"
 default[:system][:email] = "your-email@domain.com"
 
@@ -11,7 +11,7 @@ default[:p4settings][:P4PORT] = "op1-sfdeploy2.mah3.sfo2.snapfish.com:1666"
 default[:p4settings][:P4MERGE] = "/usr/bin/p4merge"
 
 
-default[:ldap][:LDAP_USER] = "tenant10"
+default[:ldap][:LDAP_USER] = "sqat"
 default[:ldap][:LDAP_PASSWD] = "your-ldap-password"
 
 default[:temp] = "/Temp"
