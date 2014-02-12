@@ -14,12 +14,6 @@ directory "#{node[:home]}#{node[:programs]}" do
   action :create
 end
 
-execute "-- changing permissions of JDK bin file" do
-  user "#{node[:system][:owner]}"  
-  cwd "#{node[:home]}#{node[:programs]}"
-  command "chmod 755 #{node[:home]}#{node[:binaries_sqat_folder]}/#{node[:binaries][:jdk1_7_0]}"
-end
-
 execute "-- Installing JDK" do
   user "#{node[:system][:owner]}"  
   cwd "#{node[:home]}#{node[:programs]}"
