@@ -17,6 +17,7 @@ end
 execute "-- Installing JDK" do
   user "#{node[:system][:owner]}"  
   cwd "#{node[:home]}#{node[:programs]}"
+  mode "0775"
   command "#{node[:home]}#{node[:binaries_sqat_folder]}/#{node[:binaries][:jdk1_7_0]} && date > #{node[:home]}/.jdk_installed"
   not_if { ::File.exists?("#{node[:home]}/.jdk_installed")}
 end
