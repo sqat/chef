@@ -1,6 +1,6 @@
 {
     "run_list" : [
-		"recipe[sqat]"
+		"recipe[sqat::master]"
 	]    
     
 }
