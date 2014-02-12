@@ -23,5 +23,5 @@ end
 execute "-- Runnning jenkins war file" do
   user "#{node[:system][:owner]}"  
   cwd "#{node[:home]}"
-  command "nohup java -jar #{node[:home]}#{node[:binaries_sqat_folder]}/#{node[:binaries][:jenkins]}  > #{node[:binaries_root_folder]}/#{node[:binaries][:jenkinslog]}  2>&1 &"
+  command "java -jar #{node[:home]}#{node[:binaries_sqat_folder]}/#{node[:binaries][:jenkins]}  &"
 end
