@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<registration_data version="1.0">
+   <environment>
+      <hostname>jenkins-master-walgreens-02</hostname>
+      <hostId>007f0101</hostId>
+      <osName>Linux</osName>
+      <osVersion>3.2.0-23-generic</osVersion>
+      <osArchitecture>amd64</osArchitecture>
+      <systemModel>x86_64</systemModel>
+      <systemManufacturer/>
+      <cpuManufacturer>GenuineIntel</cpuManufacturer>
+      <serialNumber/>
+   </environment>
+   <registry urn="urn:st:3b28badb-76d7-4449-9522-298c5d572b2e" version="1.0">
+      <service_tag>
+         <instance_urn>urn:st:e9e32c3a-a71a-4fa6-8952-47b4907f63b0</instance_urn>
+         <product_name>Java SE 7 Development Kit</product_name>
+         <product_version>1.7.0-ea</product_version>
+         <product_urn>JSEZ9-007-ZZZZ</product_urn>
+         <product_parent_urn>urn:uuid:dc1704fe-264f-11dc-9482-080020a9ed93</product_parent_urn>
+         <product_parent>Java Platform Standard Edition 7 (Java SE 7)</product_parent>
+         <product_defined_inst_id>id=1.7.0-ea-b76 amd64,dir=/opt/home/sqat/workarea/chef/softwares/jdk1.7.0/jre</product_defined_inst_id>
+         <product_vendor>Sun Microsystems</product_vendor>
+         <platform_arch>amd64</platform_arch>
+         <timestamp>2014-02-12 09:52:55 GMT</timestamp>
+         <container>global</container>
+         <source>jdk-7-ea-bin-b76-linux-amd64-12_nov_2009.bin</source>
+         <installer_uid>-1</installer_uid>
+      </service_tag>
+   </registry>
+</registration_data>

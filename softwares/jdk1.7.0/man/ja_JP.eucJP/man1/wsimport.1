@@ -1,0 +1,777 @@
+." Copyright 2006 Sun Microsystems, Inc.  All rights reserved.
+." SUN PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+.TH wsimport 1 "04 May 2009"
+." Generated from HTML by html2man (author: Eric Armstrong)
+.SH "\ufffd\ufffd\ufffd"
+wsimport \- XML Web Services (JAX\-WS) 2.0 \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd Java(TM) API
+.LP
+\f3ä»\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¸ã\ufffd\ufffd\ufffd\fP 2.1
+.br
+\f3å®\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¸ã\ufffd\ufffd\ufffd\fP 2.1.1
+.br
+.SH "æ¦\ufffd\ufffd"
+.LP
+\f2wsimport\fP \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd JAX\-WS \ufffd\ufffd\ufffd\ufffd¿ã\ufffd\ufffd\ufffd\ufffd\ufffd¼ã\ufffd\ufffd£ã\ufffd\ufffd¡ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd
+.RS 3
+.TP 2
+o
+\ufffdµã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¤ã\ufffd\ufffd\ufffd\ufffd\ufffd³ã\ufffd\ufffd\ufffd\ufffd\ufffd¼ã\ufffd (SEI) 
+.TP 2
+o
+\ufffdµã\ufffd\ufffd\ufffd\ufffd 
+.TP 2
+o
+wsdl:fault \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdä¾\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd(å­\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd´å\ufffd) 
+.TP 2
+o
+å¿\ufffd\ufffd wsdl:message \ufffd\ufffd\ufffdæ´¾ç\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdç­\ufffdBean (å­\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd´å\ufffd) 
+.TP 2
+o
+JAX\-B \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¿ã\ufffd\ufffd\ufffd(\ufffd¹ã\ufffd\ufffd¼ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd Java \ufffd\ufffd\ufffd\ufffd\ufffd 
+.RE
+.LP
+\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¢ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdWSDL \ufffd\ufffd\ufffd\ufffd¥ã\ufffd\ufffd³ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¡ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd³ã\ufffd\ufffd³ã\ufffd\ufffd\ufffd\ufffd\ufffd³ã\ufffdå®\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd WAR \ufffd\ufffd\ufffd\ufffd¤ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd±ã\ufffd\ufffd¸å\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¾ã\ufffd\ufffd\ufffdsimport Ant \ufffd¿ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¾ã\ufffd\ufffd\ufffd.na
+\f2Wsimport Ant \ufffd¿ã\ufffd\ufffd\ufffdfP @
+.fi
+https://jax\-ws.dev.java.net/nonav/2.1.1/docs/wsimportant.html\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd
+.br
+
+.LP
+.SH "wsimport \ufffd\ufffdµ·\ufffd\ufffd
+.RS 3
+.TP 2
+o
+\f3Solaris/Linux\fP 
+.RS 3
+.TP 2
+*
+\f2/bin/wsimport.sh \-help\fP 
+.RE
+.TP 2
+o
+\f3Windows\fP 
+.RS 3
+.TP 2
+*
+\f2\\bin\\wsimport.bat \-help\fP 
+.RE
+.RE
+
+.LP
+.SH "æ§\ufffd\ufffd"
+.nf
+\f3
+.fl
+wsimport [options] <wsdl>
+.fl
+\fP
+.fi
+.LP
+æ¬¡ã\ufffdè¡\ufffd\ufffd\ufffd\ufffdf2wsimport\fP \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd§ã\ufffd\ufffd\ufffd¤º\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd
+.LP
+.TS
+.if \n+(b.=1 .nr d. \n(.c-\n(c.-1
+.de 35
+.ps \n(.s
+.vs \n(.vu
+.in \n(.iu
+.if \n(.u .fi
+.if \n(.j .ad
+.if \n(.j=0 .na
+..
+.nf
+.nr #~ 0
+.if n .nr #~ 0.6n
+.ds #d .d
+.if \(ts\n(.z\(ts\(ts .ds #d nl
+.fc
+.nr 33 \n(.s
+.rm 80 81
+.nr 34 \n(.lu
+.eo
+.am 81
+.br
+.di a+
+.35
+.ft \n(.f
+.ll \n(34u*1u/3u
+.if \n(.l<\n(81 .ll \n(81u
+.in 0
+\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¡ã\ufffd\ufffd\ufffd\ufffd\ufffd¼ç\ufffd\ufffd\ufffd\ufffd\ufffd´æ\ufffd\ufffd\ufffd\ufffdå®\ufffd\ufffd\ufffd¾ã\ufffd
+.br
+.di
+.nr a| \n(dn
+.nr a- \n(dl
+..
+.ec \
+.eo
+.am 81
+.br
+.di b+
+.35
+.ft \n(.f
+.ll \n(34u*1u/3u
+.if \n(.l<\n(81 .ll \n(81u
+.in 0
+å¤\ufffd\ufffd\ufffd\ufffdJAX\-WS \ufffd¾ã\ufffd\ufffd\ufffdJAXB \ufffd\ufffd\ufffd\ufffd³ã\ufffd\ufffd£ã\ufffd\ufffd°ã\ufffd\ufffd¡ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd(\f2<file>\fP \ufffd\ufffd\ufffd\ufffd\ufffd\f2\-b\fP \ufffd\ufffd\ufffdè¦\ufffd\ufffd\ufffd\ufffd\ufffd)
+.br
+.di
+.nr b| \n(dn
+.nr b- \n(dl
+..
+.ec \
+.eo
+.am 81
+.br
+.di c+
+.35
+.ft \n(.f
+.ll \n(34u*1u/3u
+.if \n(.l<\n(81 .ll \n(81u
+.in 0
+\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd·ã\ufffd\ufffd³ã\ufffd JAXB \ufffd¹ã\ufffd\ufffd¼ã\ufffd\ufffd³ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdæ¸¡ã\ufffd\ufffd¾ã\ufffd
+.br
+.di
+.nr c| \n(dn
+.nr c- \n(dl
+..
+.ec \
+.eo
+.am 81
+.br
+.di d+
+.35
+.ft \n(.f
+.ll \n(34u*1u/3u
+.if \n(.l<\n(81 .ll \n(81u
+.in 0
+å¤\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¼å\ufffd\ufffd\ufffd\ufffd§£æ±ºã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¤ã\ufffd\ufffd\ufffd\ufffdå®\ufffd\ufffd\ufffd¾ã\ufffd\ufffd\ufffdTR9401\ufffd\ufffdCatalog\ufffd\ufffdASIS XML Catalog \ufffd\ufffd\ufffdå½¢å\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd
+.na
+\f2\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\fP @
+.fi
+https://jax\-ws.dev.java.net/nonav/2.1.1/docs/catalog\-support.html\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¡ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¿ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdf3\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\fP\ufffd\ufffd\ufffd\ufffd³ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd
+.br
+.di
+.nr d| \n(dn
+.nr d- \n(dl
+..
+.ec \
+.eo
+.am 81
+.br
+.di e+
+.35
+.ft \n(.f
+.ll \n(34u*1u/3u
+.if \n(.l<\n(81 .ll \n(81u
+.in 0
+\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¡å¼µ (ä»\ufffd\ufffd\ufffd§è\ufffdå®\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd \ufffd\ufffd¨±\ufffd\ufffd\ufffd\ufffd¾ã\ufffd\ufffd\ufffd\ufffdå¼µã\ufffdä½¿ç\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¢ã\ufffd\ufffd\ufffd\ufffd\ufffd¼ã\ufffd\ufffd§ã\ufffd\ufffd\ufffd§»æ¤\ufffd\ufffd\ufffd\ufffd¤±\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd»ã\ufffd\ufffd\ufffd\ufffdè£\ufffd\ufffd\ufffd\ufffd\ufffdäº\ufffd\ufffd\ufffd\ufffd\ufffdè¡\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd§ã\ufffd\ufffd\ufffd\ufffd\ufffd¾ã\ufffd
+.br
+.di
+.nr e| \n(dn
+.nr e- \n(dl
+..
+.ec \
+.eo
+.am 81
+.br
+.di f+
+.35
+.ft \n(.f
+.ll \n(34u*1u/3u
+.if \n(.l<\n(81 .ll \n(81u
+.in 0
+\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdè¡\ufffd¤º\ufffd\ufffd\ufffd\ufffd\ufffd.br
+.di
+.nr f| \n(dn
+.nr f- \n(dl
+..
+.ec \
+.eo
+.am 80
+.br
+.di g+
+.35
+.ft \n(.f
+.ll \n(34u*1u/3u
+.if \n(.l<\n(80 .ll \n(80u
+.in 0
+\f3\-httpproxy:<host>:<port> \fP
+.br
+.di
+.nr g| \n(dn
+.nr g- \n(dl
+..
+.ec \
+.eo
+.am 81
+.br
+.di h+
+.35
+.ft \n(.f
+.ll \n(34u*1u/3u
+.if \n(.l<\n(81 .ll \n(81u
+.in 0
+HTTP \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdµã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdå®\ufffd\ufffd\ufffd¾ã\ufffd (\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd 8080)
+.br
+.di
+.nr h| \n(dn
+.nr h- \n(dl
+..
+.ec \
+.eo
+.am 81
+.br
+.di i+
+.35
+.ft \n(.f
+.ll \n(34u*1u/3u
+.if \n(.l<\n(81 .ll \n(81u
+.in 0
+\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¡ã\ufffd\ufffd\ufffd\ufffdä¿\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd.br
+.di
+.nr i| \n(dn
+.nr i- \n(dl
+..
+.ec \
+.eo
+.am 81
+.br
+.di j+
+.35
+.ft \n(.f
+.ll \n(34u*1u/3u
+.if \n(.l<\n(81 .ll \n(81u
+.in 0
+\ufffd\ufffd\ufffd\ufffd³ã\ufffd\ufffd³ã\ufffdè¡\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd§ã\ufffdçµ\ufffd\ufffd\ufffd§ã\ufffd\ufffd¼ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd±ã\ufffd\ufffd¸ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd´å\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdå®\ufffd\ufffdå®¹ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¼ã\ufffd\ufffd\ufffd\ufffdå¯¾ã\ufffd\ufffd\ufffd\ufffd\ufffd¹ã\ufffd\ufffd\ufffdWSDL/\ufffd¹ã\ufffd\ufffd¼ã\ufffd\ufffd\ufffd\ufffd\ufffd³ã\ufffd\ufffd£ã\ufffd\ufffd°ã\ufffd\ufffd¹ã\ufffd\ufffd\ufffd\ufffd\ufffdºã\ufffd\ufffd\ufffdä»\ufffd\ufffd\ufffd§è\ufffdå®\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd±ã\ufffd\ufffd¸å\ufffd\ufffd¢ã\ufffd\ufffd´ã\ufffd\ufffdºã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd.br
+.di
+.nr j| \n(dn
+.nr j- \n(dl
+..
+.ec \
+.eo
+.am 81
+.br
+.di k+
+.35
+.ft \n(.f
+.ll \n(34u*1u/3u
+.if \n(.l<\n(81 .ll \n(81u
+.in 0
+\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¼ã\ufffd\ufffd\ufffd\ufffd\ufffd¤ã\ufffd\ufffd\ufffd\ufffdç´\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd.br
+.di
+.nr k| \n(dn
+.nr k- \n(dl
+..
+.ec \
+.eo
+.am 81
+.br
+.di l+
+.35
+.ft \n(.f
+.ll \n(34u*1u/3u
+.if \n(.l<\n(81 .ll \n(81u
+.in 0
+\ufffd³ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdå®\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¡ã\ufffd\ufffd»ã\ufffd\ufffd¸ã\ufffd\ufffdºå\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd.br
+.di
+.nr l| \n(dn
+.nr l- \n(dl
+..
+.ec \
+.eo
+.am 81
+.br
+.di m+
+.35
+.ft \n(.f
+.ll \n(34u*1u/3u
+.if \n(.l<\n(81 .ll \n(81u
+.in 0
+\ufffd\ufffd\ufffd\ufffd¸ã\ufffd\ufffd³æ\ufffd\ufffd±ã\ufffd\ufffdºå\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd.br
+.di
+.nr m| \n(dn
+.nr m- \n(dl
+..
+.ec \
+.eo
+.am 80
+.br
+.di n+
+.35
+.ft \n(.f
+.ll \n(34u*1u/3u
+.if \n(.l<\n(80 .ll \n(80u
+.in 0
+\f3\-wsdllocation <location>\fP
+.br
+.di
+.nr n| \n(dn
+.nr n- \n(dl
+..
+.ec \
+.eo
+.am 81
+.br
+.di o+
+.35
+.ft \n(.f
+.ll \n(34u*1u/3u
+.if \n(.l<\n(81 .ll \n(81u
+.in 0
+\f2@WebServiceClient.wsdlLocation\fP \ufffd\ufffd.br
+.di
+.nr o| \n(dn
+.nr o- \n(dl
+..
+.ec \
+.eo
+.am 81
+.br
+.di p+
+.35
+.ft \n(.f
+.ll \n(34u*1u/3u
+.if \n(.l<\n(81 .ll \n(81u
+.in 0
+\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdJAX\-WS ä»\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¸ã\ufffd\ufffd³ã\ufffdå¾\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¼ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¾ã\ufffd\ufffd\ufffd\ufffd\ufffd¼ã\ufffd\ufffd§ã\ufffd 2.0 \ufffd§ã\ufffd\ufffd\ufffdAX\-WS 2.0 ä»\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¼ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¾ã\ufffd\ufffd\ufffd.br
+.di
+.nr p| \n(dn
+.nr p- \n(dl
+..
+.ec \
+.eo
+.am 81
+.br
+.di q+
+.35
+.ft \n(.f
+.ll \n(34u*1u/3u
+.if \n(.l<\n(81 .ll \n(81u
+.in 0
+wsimport \ufffdºå\ufffd\ufffd\ufffd\ufffd\ufffd¶ã\ufffd\ufffd¾ã\ufffd
+.br
+.di
+.nr q| \n(dn
+.nr q- \n(dl
+..
+.ec \
+.35
+.nf
+.ll \n(34u
+.nr 80 0
+.nr 38 \w\f3\ufffd\ufffd\ufffd\ufffd·ã\ufffd\ufffd\ufffdfP
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w\f3\-d <directory> \fP
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w\f3\-b <path> \fP
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w\f3\-B <jaxbOption>\fP
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w\f3\-catalog\fP
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w\f3\-extension \fP
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w\f3\-help \fP
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w\f3\-keep \fP
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w\f3\-p \fP
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w\f3\-s <directory> \fP
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w\f3\-verbose \fP
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w\f3\-version \fP
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w\f3\-target \fP
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \w\f3\-quiet \fP
+.if \n(80<\n(38 .nr 80 \n(38
+.80
+.rm 80
+.nr 38 \n(g-
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 38 \n(n-
+.if \n(80<\n(38 .nr 80 \n(38
+.nr 81 0
+.nr 38 \w\f3èª\ufffd\ufffd\fP
+.if \n(81<\n(38 .nr 81 \n(38
+.81
+.rm 81
+.nr 38 \n(a-
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \n(b-
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \n(c-
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \n(d-
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \n(e-
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \n(f-
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \n(h-
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \n(i-
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \n(j-
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \n(k-
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \n(l-
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \n(m-
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \n(o-
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \n(p-
+.if \n(81<\n(38 .nr 81 \n(38
+.nr 38 \n(q-
+.if \n(81<\n(38 .nr 81 \n(38
+.35
+.nf
+.ll \n(34u
+.nr 38 1n
+.nr 79 0
+.nr 40 \n(79+(0*\n(38)
+.nr 80 +\n(40
+.nr 41 \n(80+(3*\n(38)
+.nr 81 +\n(41
+.nr TW \n(81
+.if t .if \n(TW>\n(.li .tm Table at line 164 file Input is too wide - \n(TW units
+.fc  
+.nr #T 0-1
+.nr #a 0-1
+.eo
+.de T#
+.ds #d .d
+.if \(ts\n(.z\(ts\(ts .ds #d nl
+.mk ##
+.nr ## -1v
+.ls 1
+.ls
+..
+.ec
+.ta \n(80u \n(81u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\f3\ufffd\ufffd\ufffd\ufffd·ã\ufffd\ufffd\ufffdfP\h'|\n(41u'\f3èª\ufffd\ufffd\fP
+.ne \n(a|u+\n(.Vu
+.if (\n(a|+\n(#^-1v)>\n(#- .nr #- +(\n(a|+\n(#^-\n(#--1v)
+.ta \n(80u \n(81u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\f3\-d <directory> \fP\h'|\n(41u'
+.mk ##
+.nr 31 \n(##
+.sp |\n(##u-1v
+.nr 37 \n(41u
+.in +\n(37u
+.a+
+.in -\n(37u
+.mk 32
+.if \n(32>\n(31 .nr 31 \n(32
+.sp |\n(31u
+.ne \n(b|u+\n(.Vu
+.if (\n(b|+\n(#^-1v)>\n(#- .nr #- +(\n(b|+\n(#^-\n(#--1v)
+.ta \n(80u \n(81u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\f3\-b <path> \fP\h'|\n(41u'
+.mk ##
+.nr 31 \n(##
+.sp |\n(##u-1v
+.nr 37 \n(41u
+.in +\n(37u
+.b+
+.in -\n(37u
+.mk 32
+.if \n(32>\n(31 .nr 31 \n(32
+.sp |\n(31u
+.ne \n(c|u+\n(.Vu
+.if (\n(c|+\n(#^-1v)>\n(#- .nr #- +(\n(c|+\n(#^-\n(#--1v)
+.ta \n(80u \n(81u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\f3\-B <jaxbOption>\fP\h'|\n(41u'
+.mk ##
+.nr 31 \n(##
+.sp |\n(##u-1v
+.nr 37 \n(41u
+.in +\n(37u
+.c+
+.in -\n(37u
+.mk 32
+.if \n(32>\n(31 .nr 31 \n(32
+.sp |\n(31u
+.ne \n(d|u+\n(.Vu
+.if (\n(d|+\n(#^-1v)>\n(#- .nr #- +(\n(d|+\n(#^-\n(#--1v)
+.ta \n(80u \n(81u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\f3\-catalog\fP\h'|\n(41u'
+.mk ##
+.nr 31 \n(##
+.sp |\n(##u-1v
+.nr 37 \n(41u
+.in +\n(37u
+.d+
+.in -\n(37u
+.mk 32
+.if \n(32>\n(31 .nr 31 \n(32
+.sp |\n(31u
+.ne \n(e|u+\n(.Vu
+.if (\n(e|+\n(#^-1v)>\n(#- .nr #- +(\n(e|+\n(#^-\n(#--1v)
+.ta \n(80u \n(81u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\f3\-extension \fP\h'|\n(41u'
+.mk ##
+.nr 31 \n(##
+.sp |\n(##u-1v
+.nr 37 \n(41u
+.in +\n(37u
+.e+
+.in -\n(37u
+.mk 32
+.if \n(32>\n(31 .nr 31 \n(32
+.sp |\n(31u
+.ne \n(f|u+\n(.Vu
+.if (\n(f|+\n(#^-1v)>\n(#- .nr #- +(\n(f|+\n(#^-\n(#--1v)
+.ta \n(80u \n(81u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\f3\-help \fP\h'|\n(41u'
+.mk ##
+.nr 31 \n(##
+.sp |\n(##u-1v
+.nr 37 \n(41u
+.in +\n(37u
+.f+
+.in -\n(37u
+.mk 32
+.if \n(32>\n(31 .nr 31 \n(32
+.sp |\n(31u
+.ne \n(g|u+\n(.Vu
+.ne \n(h|u+\n(.Vu
+.if (\n(g|+\n(#^-1v)>\n(#- .nr #- +(\n(g|+\n(#^-\n(#--1v)
+.if (\n(h|+\n(#^-1v)>\n(#- .nr #- +(\n(h|+\n(#^-\n(#--1v)
+.ta \n(80u \n(81u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\h'|\n(41u'
+.mk ##
+.nr 31 \n(##
+.sp |\n(##u-1v
+.nr 37 \n(40u
+.in +\n(37u
+.g+
+.in -\n(37u
+.mk 32
+.if \n(32>\n(31 .nr 31 \n(32
+.sp |\n(##u-1v
+.nr 37 \n(41u
+.in +\n(37u
+.h+
+.in -\n(37u
+.mk 32
+.if \n(32>\n(31 .nr 31 \n(32
+.sp |\n(31u
+.ne \n(i|u+\n(.Vu
+.if (\n(i|+\n(#^-1v)>\n(#- .nr #- +(\n(i|+\n(#^-\n(#--1v)
+.ta \n(80u \n(81u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\f3\-keep \fP\h'|\n(41u'
+.mk ##
+.nr 31 \n(##
+.sp |\n(##u-1v
+.nr 37 \n(41u
+.in +\n(37u
+.i+
+.in -\n(37u
+.mk 32
+.if \n(32>\n(31 .nr 31 \n(32
+.sp |\n(31u
+.ne \n(j|u+\n(.Vu
+.if (\n(j|+\n(#^-1v)>\n(#- .nr #- +(\n(j|+\n(#^-\n(#--1v)
+.ta \n(80u \n(81u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\f3\-p \fP\h'|\n(41u'
+.mk ##
+.nr 31 \n(##
+.sp |\n(##u-1v
+.nr 37 \n(41u
+.in +\n(37u
+.j+
+.in -\n(37u
+.mk 32
+.if \n(32>\n(31 .nr 31 \n(32
+.sp |\n(31u
+.ne \n(k|u+\n(.Vu
+.if (\n(k|+\n(#^-1v)>\n(#- .nr #- +(\n(k|+\n(#^-\n(#--1v)
+.ta \n(80u \n(81u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\f3\-s <directory> \fP\h'|\n(41u'
+.mk ##
+.nr 31 \n(##
+.sp |\n(##u-1v
+.nr 37 \n(41u
+.in +\n(37u
+.k+
+.in -\n(37u
+.mk 32
+.if \n(32>\n(31 .nr 31 \n(32
+.sp |\n(31u
+.ne \n(l|u+\n(.Vu
+.if (\n(l|+\n(#^-1v)>\n(#- .nr #- +(\n(l|+\n(#^-\n(#--1v)
+.ta \n(80u \n(81u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\f3\-verbose \fP\h'|\n(41u'
+.mk ##
+.nr 31 \n(##
+.sp |\n(##u-1v
+.nr 37 \n(41u
+.in +\n(37u
+.l+
+.in -\n(37u
+.mk 32
+.if \n(32>\n(31 .nr 31 \n(32
+.sp |\n(31u
+.ne \n(m|u+\n(.Vu
+.if (\n(m|+\n(#^-1v)>\n(#- .nr #- +(\n(m|+\n(#^-\n(#--1v)
+.ta \n(80u \n(81u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\f3\-version \fP\h'|\n(41u'
+.mk ##
+.nr 31 \n(##
+.sp |\n(##u-1v
+.nr 37 \n(41u
+.in +\n(37u
+.m+
+.in -\n(37u
+.mk 32
+.if \n(32>\n(31 .nr 31 \n(32
+.sp |\n(31u
+.ne \n(n|u+\n(.Vu
+.ne \n(o|u+\n(.Vu
+.if (\n(n|+\n(#^-1v)>\n(#- .nr #- +(\n(n|+\n(#^-\n(#--1v)
+.if (\n(o|+\n(#^-1v)>\n(#- .nr #- +(\n(o|+\n(#^-\n(#--1v)
+.ta \n(80u \n(81u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\h'|\n(41u'
+.mk ##
+.nr 31 \n(##
+.sp |\n(##u-1v
+.nr 37 \n(40u
+.in +\n(37u
+.n+
+.in -\n(37u
+.mk 32
+.if \n(32>\n(31 .nr 31 \n(32
+.sp |\n(##u-1v
+.nr 37 \n(41u
+.in +\n(37u
+.o+
+.in -\n(37u
+.mk 32
+.if \n(32>\n(31 .nr 31 \n(32
+.sp |\n(31u
+.ne \n(p|u+\n(.Vu
+.if (\n(p|+\n(#^-1v)>\n(#- .nr #- +(\n(p|+\n(#^-\n(#--1v)
+.ta \n(80u \n(81u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\f3\-target \fP\h'|\n(41u'
+.mk ##
+.nr 31 \n(##
+.sp |\n(##u-1v
+.nr 37 \n(41u
+.in +\n(37u
+.p+
+.in -\n(37u
+.mk 32
+.if \n(32>\n(31 .nr 31 \n(32
+.sp |\n(31u
+.ne \n(q|u+\n(.Vu
+.if (\n(q|+\n(#^-1v)>\n(#- .nr #- +(\n(q|+\n(#^-\n(#--1v)
+.ta \n(80u \n(81u 
+.nr 31 \n(.f
+.nr 35 1m
+\&\h'|\n(40u'\f3\-quiet \fP\h'|\n(41u'
+.mk ##
+.nr 31 \n(##
+.sp |\n(##u-1v
+.nr 37 \n(41u
+.in +\n(37u
+.q+
+.in -\n(37u
+.mk 32
+.if \n(32>\n(31 .nr 31 \n(32
+.sp |\n(31u
+.fc
+.nr T. 1
+.T# 1
+.35
+.rm a+
+.rm b+
+.rm c+
+.rm d+
+.rm e+
+.rm f+
+.rm g+
+.rm h+
+.rm i+
+.rm j+
+.rm k+
+.rm l+
+.rm m+
+.rm n+
+.rm o+
+.rm p+
+.rm q+
+.TE
+.if \n-(b.=0 .nr c. \n(.c-\n(d.-72
+.LP
+\f2\-b\fP \ufffd\ufffd\ufffd\ufffd·ã\ufffd\ufffd³ã\ufffdä½¿ã\ufffd\ufffd\ufffd\ufffdè¤\ufffd\ufffd\ufffd\ufffdJAX\-WS \ufffd\ufffd\ufffd\ufffd\ufffdJAXB \ufffd\ufffd\ufffd\ufffd³ã\ufffd\ufffd£ã\ufffd\ufffd°ã\ufffd\ufffd¡ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd§ã\ufffd\ufffd¾ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¤ã\ufffd\ufffd\ufffd½¿\ufffd£ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¼ã\ufffd\ufffd\ufffd\ufffd Bean \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¹ã\ufffd\ufffd\ufffd\ufffd\ufffdºã\ufffd\ufffd\ufffd\ufffd\ufffd§ã\ufffd\ufffd\ufffdJAX\-WS \ufffd\ufffd\ufffd\ufffd\ufffdJAXB \ufffd\ufffd\ufffd\ufffd³ã\ufffd\ufffd£ã\ufffd\ufffd°ã\ufffd\ufffd¡ã\ufffd\ufffd\ufffd\ufffdè©³ç´°\ufffd\ufffd\ufffd
+.na
+\f2\ufffd\ufffd\ufffd\ufffd¿ã\ufffd\ufffd¤ã\ufffd\ufffd\ufffd\ufffd\ufffd¥ã\ufffd\ufffd\ufffdfP @
+.fi
+https://jax\-ws.dev.java.net/nonav/2.1.1/docs/customizations.html\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd
+.LP
+.SH "ä¾\ufffd
+.nf
+\f3
+.fl
+\fP\f3wsimport \-p stockquote http://stockquote.xyz/quote?wsdl\fP
+.fl
+.fi
+.LP
+Java \ufffd¢ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdf2http://stockquote.xyz/quote?wsdl\fP \ufffd\ufffd\ufffd\ufffd³ã\ufffd\ufffd¼ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd§ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¢ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd³ã\ufffd\ufffd¤ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd
+.br
+ 

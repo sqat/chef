@@ -1,0 +1,362 @@
+." Copyright 2002-2006 Sun Microsystems, Inc.  All rights reserved.
+." SUN PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+."
+.TH javap 1 "04 May 2009"
+." Generated from HTML by html2man (author: Eric Armstrong)
+
+.LP
+.SH "\ufffd\ufffd\ufffd"
+javap \- Java \ufffd\ufffd\ufffd\ufffd¹ã\ufffd\ufffd¡ã\ufffd\ufffd\ufffd\ufffd\ufffd¢ã\ufffd\ufffd³ã\ufffd\ufffd\ufffd.LP
+.RS 3
+
+.LP
+.LP
+\ufffd\ufffd\ufffd\ufffd¹ã\ufffd\ufffd¡ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd»ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd
+.LP
+.RE
+.SH "å½¢å\ufffd"
+.LP
+
+.LP
+.nf
+\f3
+.fl
+javap [ \fP\f3options\fP\f3 ] class. . .
+.fl
+\fP
+.fi
+
+.LP
+.SH "èª\ufffd\ufffd"
+.LP
+
+.LP
+.LP
+\f3javap\fP \ufffd³ã\ufffd\ufffd³ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¹ã\ufffd\ufffd¡ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd»ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdºå\ufffd\ufffd\ufffd\ufffdå®\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd§ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¾ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd§ã\ufffd\ufffd\ufffd\ufffdå®\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd´å\ufffd\ufffd\ufffdf3javap\fP \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd±ã\ufffd\ufffd¸ã\ufffdæ¸¡ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¹ã\ufffd protected \ufffd\ufffd\ufffd\ufffd\ufffdpublic \ufffd\ufffd\ufffd\ufffd£ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd½ã\ufffd\ufffd\ufffd\ufffd\ufffdºå\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd \f3javap\fP \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdæ¨\ufffd\ufffd\ufffdºå\ufffd\ufffd\ufffd¡¨ç¤ºã\ufffd\ufffd¾ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd°ã\ufffdæ¬¡ã\ufffd\ufffd\ufffd\ufffd\ufffd¹å\ufffdè¨\ufffd\ufffd\ufffd³ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd
+.LP
+.RS 3
+
+.LP
+.nf
+\f3
+.fl
+import java.awt.*;
+.fl
+import java.applet.*;
+.fl
+
+.fl
+public class DocFooter extends Applet {
+.fl
+        String date;
+.fl
+        String email;
+.fl
+
+.fl
+        public void init() {
+.fl
+                resize(500,100);
+.fl
+                date = getParameter("LAST_UPDATED");
+.fl
+                email = getParameter("EMAIL");
+.fl
+        }
+.fl
+
+.fl
+        public void paint(Graphics g) {
+.fl
+                g.drawString(date + " by ",100, 15);
+.fl
+                g.drawString(email,290,15);
+.fl
+        }
+.fl
+}
+.fl
+\fP
+.fi
+.RE
+
+.LP
+.LP
+\f3javap DocFooter\fP \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdæ¬¡ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd
+.LP
+.RS 3
+
+.LP
+.nf
+\f3
+.fl
+Compiled from DocFooter.java
+.fl
+public class DocFooter extends java.applet.Applet {
+.fl
+    java.lang.String date;
+.fl
+    java.lang.String email;
+.fl
+    public DocFooter();
+.fl
+    public void init();
+.fl
+    public void paint(java.awt.Graphics);
+.fl
+}
+.fl
+\fP
+.fi
+.RE
+
+.LP
+.LP
+\f3javap \-c DocFooter\fP \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdæ¬¡ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd
+.LP
+.RS 3
+
+.LP
+.nf
+\f3
+.fl
+Compiled from DocFooter.java
+.fl
+public class DocFooter extends java.applet.Applet {
+.fl
+    java.lang.String date;
+.fl
+    java.lang.String email;
+.fl
+    public DocFooter();
+.fl
+    public void init();
+.fl
+    public void paint(java.awt.Graphics);
+.fl
+}
+.fl
+
+.fl
+Method DocFooter()
+.fl
+   0 aload_0
+.fl
+   1 invokespecial #1 <Method java.applet.Applet()>
+.fl
+   4 return
+.fl
+
+.fl
+Method void init()
+.fl
+   0 aload_0
+.fl
+   1 sipush 500
+.fl
+   4 bipush 100
+.fl
+   6 invokevirtual #2 <Method void resize(int, int)>
+.fl
+   9 aload_0
+.fl
+  10 aload_0
+.fl
+  11 ldc #3 <String "LAST_UPDATED">
+.fl
+  13 invokevirtual #4 <Method java.lang.String getParameter(java.lang.String)>
+.fl
+  16 putfield #5 <Field java.lang.String date>
+.fl
+  19 aload_0
+.fl
+  20 aload_0
+.fl
+  21 ldc #6 <String "EMAIL">
+.fl
+  23 invokevirtual #4 <Method java.lang.String getParameter(java.lang.String)>
+.fl
+  26 putfield #7 <Field java.lang.String email>
+.fl
+  29 return
+.fl
+
+.fl
+Method void paint(java.awt.Graphics)
+.fl
+   0 aload_1
+.fl
+   1 new #8 <Class java.lang.StringBuffer>
+.fl
+   4 dup
+.fl
+   5 invokespecial #9 <Method java.lang.StringBuffer()>
+.fl
+   8 aload_0
+.fl
+   9 getfield #5 <Field java.lang.String date>
+.fl
+  12 invokevirtual #10 <Method java.lang.StringBuffer append(java.lang.String)>
+.fl
+  15 ldc #11 <String " by ">
+.fl
+  17 invokevirtual #10 <Method java.lang.StringBuffer append(java.lang.String)>
+.fl
+  20 invokevirtual #12 <Method java.lang.String toString()>
+.fl
+  23 bipush 100
+.fl
+  25 bipush 15
+.fl
+  27 invokevirtual #13 <Method void drawString(java.lang.String, int, int)>
+.fl
+  30 aload_1
+.fl
+  31 aload_0
+.fl
+  32 getfield #7 <Field java.lang.String email>
+.fl
+  35 sipush 290
+.fl
+  38 bipush 15
+.fl
+  40 invokevirtual #13 <Method void drawString(java.lang.String, int, int)>
+.fl
+  43 return
+.fl
+\fP
+.fi
+.RE
+
+.LP
+.SH "\ufffd\ufffd\ufffd\ufffd·ã\ufffd\ufffd\ufffd
+.LP
+
+.LP
+.RS 3
+.TP 3
+\-help 
+\f3javap\fP \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¡ã\ufffd\ufffd»ã\ufffd\ufffd¸ã\ufffd\ufffdºå\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd 
+.TP 3
+\-l 
+è¡\ufffd\ufffd\ufffd·ã\ufffdå±\ufffd\ufffdå¤\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¡¨ç¤ºã\ufffd\ufffd¾ã\ufffd\ufffd\ufffd
+.TP 3
+\-b 
+JDK 1.1 \ufffd\ufffd\f3javap\fP \ufffd\ufffd\ufffdä¸\ufffd\ufffdäº\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdè¨¼ã\ufffd\ufffd¾ã\ufffd\ufffd\ufffd
+.TP 3
+\-public 
+public \ufffd\ufffd\ufffd\ufffd¹ã\ufffd\ufffd\ufffd\ufffd\ufffd¡ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¡¨ç¤ºã\ufffd\ufffd¾ã\ufffd\ufffd\ufffd
+.TP 3
+\-protected 
+protected \ufffd\ufffd\ufffd\ufffd\ufffdpublic \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd³ã\ufffd\ufffd¼ã\ufffd\ufffd\ufffd\ufffdè¡\ufffd¤º\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd 
+.TP 3
+\-package 
+package\ufffd\ufffdrotected\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd public \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd³ã\ufffd\ufffd¼ã\ufffd\ufffd\ufffd\ufffdè¡\ufffd¤º\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¨­å®\ufffd\ufffd\ufffd\ufffd\ufffd 
+.TP 3
+\-private 
+\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¹ã\ufffd\ufffd¡ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¡¨ç¤ºã\ufffd\ufffd¾ã\ufffd\ufffd\ufffd
+.TP 3
+\-Jflag 
+\ufffd\ufffd\ufffd\ufffd¿ã\ufffd\ufffd\ufffd\ufffd\ufffd¹ã\ufffd\ufffd\ufffd\ufffd\ufffd´æŽ¥ \f2flag\fP \ufffd\ufffd¸¡\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdä½¿ç\ufffdä¾\ufffd\ufffdæ¬¡ã\ufffdç¤ºã\ufffd\ufffd¾ã\ufffd\ufffd\ufffd
+.RS 3
+
+.LP
+.nf
+\f3
+.fl
+javap \-J\-version
+.fl
+javap \-J\-Djava.security.manager \-J\-Djava.security.policy=MyPolicy MyClassName
+.fl
+\fP
+.fi
+.RE
+.TP 3
+\-s 
+\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd·ã\ufffd\ufffd\ufffd\ufffd\ufffd£ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¾ã\ufffd\ufffd\ufffd
+.TP 3
+\-c 
+\ufffd\ufffd\ufffd\ufffd¹ã\ufffd\ufffd\ufffd\ufffd\ufffd½ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¢ã\ufffd\ufffd³ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd³ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdJava \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¼ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd½ä»¤\ufffd\ufffd¡¨ç¤ºã\ufffd\ufffd¾ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd.na
+\f2\ufffd\ufffdava Virtual Machine Specification\ufffd\ufffdfP @
+.fi
+http://java.sun.com/docs/books/vmspec/\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¡ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¾ã\ufffd\ufffd\ufffd
+.TP 3
+\-verbose 
+\ufffd¡ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¿ã\ufffd\ufffd\ufffd\ufffd\ufffd¤ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd \f2locals\fP \ufffd\ufffd\f2args\fP \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¾ã\ufffd\ufffd\ufffd
+.TP 3
+\-classpath path 
+\f3javap\fP \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdŽ¢\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdä½¿ç\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdå®\ufffd\ufffd\ufffd¾ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¾ã\ufffd\ufffd\ufffdCLASSPATH \ufffd°å\ufffdå¤\ufffd\ufffdè¨\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¸ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd§å\ufffd\ufffd²ã\ufffd\ufffd¾ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd£ã\ufffd\ufffd\ufffdf2path\fP \ufffd\ufffd\ufffd\ufffd\ufffd½¢å¼\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¾ã\ufffd\ufffd\ufffd
+.nf
+\f3
+.fl
+   .:<your_path>
+.fl
+\fP
+.fi
+ä¾\ufffd\ufffdç¤ºã\ufffd\ufffd¾ã\ufffd\ufffd\ufffd
+.nf
+\f3
+.fl
+.:/home/avh/classes:/usr/local/java/classes
+.fl
+\fP
+.fi
+.TP 3
+\-bootclasspath path 
+\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¹ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¹ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¹ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd§ã\ufffd \f2jre/lib/rt.jar\fP \ufffd\ufffd\ufffd\ufffd³ä\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¤ã\ufffd\ufffd\ufffdJAR \ufffd\ufffd\ufffd\ufffd¤ã\ufffd \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd³ã\ufffd Java 2 \ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd¼ã\ufffd\ufffd\ufffd\ufffdè£\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd§ã\ufffd\ufffd\ufffd
+.TP 3
+\-extdirs dirs 
+\ufffd¤ã\ufffd\ufffd¹ã\ufffd\ufffd¼ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdå¼µæ\ufffd\ufffd½ã\ufffdæ¤\ufffd´¢\ufffd\ufffd\ufffd\ufffd´æ\ufffd\ufffd\ufffd\ufffd\ufffd¼ã\ufffd\ufffd¼ã\ufffd\ufffd¤ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdThe default location for extensions is the value of \f2java.ext.dirs\fP. 
+.RE
+
+.LP
+.SH "\ufffd°å\ufffdå¤\ufffd\ufffd"
+.LP
+
+.LP
+.RS 3
+.TP 3
+CLASSPATH 
+\ufffd\ufffd\ufffd\ufffd¶ã\ufffdå®\ufffd¾©\ufffd\ufffd\ufffd\ufffd¹ã\ufffd\ufffd\ufffd\ufffd\ufffd¹ã\ufffd\ufffd·ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffdå®\ufffd\ufffd\ufffd¾ã\ufffd\ufffd\ufffd\ufffd\ufffd£ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd³ã\ufffd\ufffd³ã\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd\ufffd æ¬¡ã\ufffdä¾\ufffd\ufffdç¤ºã\ufffd\ufffd¾ã\ufffd\ufffd\ufffd
+.RS 3
+
+.LP
+.nf
+\f3
+.fl
+.:/home/avh/classes:/usr/local/java/classes
+.fl
+\fP
+.fi
+.RE
+.RE
+
+.LP
+.SH "\ufffd¢é\ufffd\ufffd\ufffd\ufffd"
+.LP
+
+.LP
+.LP
+javac(1)\ufffd\ufffdjava(1)\ufffd\ufffddb(1)\ufffd\ufffdavah(1)\ufffd\ufffdavadoc(1)
+.LP
+
+.LP
+ 
