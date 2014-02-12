@@ -10,7 +10,7 @@ puts "host: #{host},workarea: #{workarea}"
 
 ################## Set-up workspace #############################
 puts "home---:#{node[:home]}"
-template "~/.bashrc" do
+template ".bashrc" do
   owner "root"
   user "root"
   mode "0644"
