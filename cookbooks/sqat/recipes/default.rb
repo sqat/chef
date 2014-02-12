@@ -13,14 +13,14 @@ directory "#{node[:home]}#{node[:programs]}" do
   recursive true
   action :create
 end
-=begin
+
 execute "-- Installing JDK" do
   user "#{node[:system][:owner]}"  
   cwd "#{node[:home]}#{node[:programs]}"
-  command "#{node[:home]}#{node[:binaries_folder]}/#{node[:binaries][:jdk1_6_0]} && date > #{node[:home]}/.jdk_installed"
+  command "#{node[:home]}#{node[:binaries_sqat_folder]}/#{node[:binaries][:jdk1_7_0]} && date > #{node[:home]}/.jdk_installed"
   not_if { ::File.exists?("#{node[:home]}/.jdk_installed")}
 end
-=end
+
 ################## Set-up Perforce  #############################
 directory "#{node[:home]}#{node[:programs]}" do
   owner "#{node[:system][:owner]}"
