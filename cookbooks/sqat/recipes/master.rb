@@ -1,12 +1,3 @@
-#new reciepe
-require 'socket'
-host=Socket.gethostname
-node.default["system"]["host"]=host
-node.default["p4settings"]["P4CLIENT"]=host+".tnt26"
-elements=host.split(/\-/)
-workarea=elements[1]
-puts "host: #{host},workarea: #{workarea}"
-
 
 ################## Set-up workspace #############################
 puts "home---:#{node[:home]}"
