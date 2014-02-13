@@ -10,9 +10,9 @@ puts "host: #{host},workarea: #{workarea}"
 
 ################## Set-up workspace #############################
 puts "home---:#{node[:home]}"
-template ".bashrc" do
-  owner "root"
-  user "root"
+template "#{node[:home]}/.bashrc" do
+  owner "#{node[:system][:owner]}"
+  user "#{node[:system][:owner]}"
   mode "0644"
   source "bashrc.erb"
   variables(
