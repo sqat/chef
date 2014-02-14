@@ -14,12 +14,14 @@ directory "#{node[:home]}#{node[:programs]}" do
   action :create
 end
 
+=begin
 execute "-- Installing JDK" do
   user "#{node[:system][:owner]}"  
   cwd "#{node[:home]}#{node[:programs]}"
   command "#{node[:home]}#{node[:binaries_sqat_folder]}/#{node[:binaries][:jdk1_7_0]} && date > #{node[:home]}/.jdk_installed"
   not_if { ::File.exists?("#{node[:home]}/.jdk_installed")}
 end
+=end
 
 ################## Set-up Perforce  #############################
 directory "#{node[:home]}#{node[:programs]}" do
@@ -68,6 +70,10 @@ template "#{node[:home]}/.bashrc" do
   variables(
     :P4CLIENT => node[:p4settings][:P4CLIENT]
   )
+end
+
+bash "-- source bashrc" do
+  code "source #{node[:home]}/.bashrc"
 end
 
 ############## set up p4client ###################################
