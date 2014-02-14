@@ -5,9 +5,6 @@ template "#{node[:home]}/.bashrc" do
   user "#{node[:system][:owner]}"
   mode "0644"
   source "bashrc.erb"
-  variables(
-    :P4CLIENT => node[:p4settings][:P4CLIENT]
-  )
 end
 
 execute "-- source bashrc" do
