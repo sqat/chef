@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causes>
+        <hudson.triggers.TimerTrigger_-TimerTriggerCause/>
+      </causes>
+    </hudson.model.CauseAction>
+  </actions>
+  <number>56</number>
+  <startTime>1387895818548</startTime>
+  <result>SUCCESS</result>
+  <duration>12308099</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn>sqat-wg-integ</builtOn>
+  <workspace>/opt/usr/apps/workspace/integ_PrintsSuite</workspace>
+  <hudsonVersion>1.517</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

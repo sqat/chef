@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.ParametersAction>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>browser</name>
+          <value>firefox</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causes>
+        <hudson.model.Cause_-UpstreamCause>
+          <upstreamProject>wg_mir_sync_param</upstreamProject>
+          <upstreamUrl>job/wg_mir_sync_param/</upstreamUrl>
+          <upstreamBuild>750</upstreamBuild>
+          <upstreamCauses>
+            <hudson.model.Cause_-UpstreamCause>
+              <upstreamProject>ProductionSanity_Daily_Param</upstreamProject>
+              <upstreamUrl>job/ProductionSanity_Daily_Param/</upstreamUrl>
+              <upstreamBuild>773</upstreamBuild>
+              <upstreamCauses>
+                <hudson.triggers.TimerTrigger_-TimerTriggerCause/>
+              </upstreamCauses>
+            </hudson.model.Cause_-UpstreamCause>
+          </upstreamCauses>
+        </hudson.model.Cause_-UpstreamCause>
+        <hudson.model.Cause_-UpstreamCause>
+          <upstreamProject>wg_mir_sync_param</upstreamProject>
+          <upstreamUrl>job/wg_mir_sync_param/</upstreamUrl>
+          <upstreamBuild>751</upstreamBuild>
+          <upstreamCauses>
+            <hudson.model.Cause_-UpstreamCause>
+              <upstreamProject>ProductionSanity_Daily_Param</upstreamProject>
+              <upstreamUrl>job/ProductionSanity_Daily_Param/</upstreamUrl>
+              <upstreamBuild>774</upstreamBuild>
+              <upstreamCauses>
+                <hudson.triggers.TimerTrigger_-TimerTriggerCause/>
+              </upstreamCauses>
+            </hudson.model.Cause_-UpstreamCause>
+          </upstreamCauses>
+        </hudson.model.Cause_-UpstreamCause>
+      </causes>
+    </hudson.model.CauseAction>
+  </actions>
+  <number>2128</number>
+  <startTime>1391661563486</startTime>
+  <result>ABORTED</result>
+  <duration>6883280</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn>sqat-wg-mir</builtOn>
+  <workspace>/opt/usr/apps/workspace/prd_WGPrdSanitySuite</workspace>
+  <hudsonVersion>1.517</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

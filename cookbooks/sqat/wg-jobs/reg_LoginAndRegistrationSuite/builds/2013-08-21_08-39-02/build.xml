@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causes>
+        <hudson.model.Cause_-UserIdCause>
+          <userId>naveendnr</userId>
+        </hudson.model.Cause_-UserIdCause>
+      </causes>
+    </hudson.model.CauseAction>
+    <jenkins.model.InterruptedBuildAction>
+      <causes class="com.google.common.collect.ImmutableList">
+        <jenkins.model.CauseOfInterruption_-UserInterruption>
+          <user>naveendnr</user>
+        </jenkins.model.CauseOfInterruption_-UserInterruption>
+      </causes>
+    </jenkins.model.InterruptedBuildAction>
+  </actions>
+  <number>2</number>
+  <startTime>1377099542826</startTime>
+  <result>ABORTED</result>
+  <duration>311700</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn>sqat-wg-reg</builtOn>
+  <workspace>/opt/usr/apps/workspace/reg_LoginAndRegistrationSuite</workspace>
+  <hudsonVersion>1.517</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>
