@@ -7,10 +7,16 @@ template "#{node[:home]}/.bashrc" do
   source "bashrc.erb"
 end
 
+=begin
 execute "-- source bashrc" do
   user "#{node[:system][:owner]}"  
   cwd "#{node[:home]}"
   command "source #{node[:home]}/.bashrc"
+end
+=end
+
+bash "-- source bashrc" do
+  code "source #{node[:home]}/.bashrc"
 end
 
 execute "-- Runnning jenkins war file" do
