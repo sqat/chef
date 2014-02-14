@@ -4,7 +4,7 @@ template "#{node[:home]}/.bashrc" do
   owner "#{node[:system][:owner]}"
   user "#{node[:system][:owner]}"
   mode "0644"
-  source "bashrc.erb"
+  source "bashrc-jenkins.erb"
 end
 
 =begin
