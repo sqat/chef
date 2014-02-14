@@ -13,7 +13,7 @@ end
 execute "-- source bashrc" do
   user "#{node[:system][:owner]}"  
   cwd "#{node[:home]}"
-  command "source .bashrc"
+  command "source #{node[:home]}/.bashrc"
 end
 
 execute "-- Runnning jenkins war file" do
