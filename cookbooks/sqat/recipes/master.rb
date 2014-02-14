@@ -1,4 +1,3 @@
-
 ################## Set-up workspace #############################
 puts "home---:#{node[:home]}"
 template "#{node[:home]}/.bashrc" do
@@ -9,6 +8,12 @@ template "#{node[:home]}/.bashrc" do
   variables(
     :P4CLIENT => node[:p4settings][:P4CLIENT]
   )
+end
+
+execute "-- source bashrc" do
+  user "#{node[:system][:owner]}"  
+  cwd "#{node[:home]}"
+  command "source .bashrc"
 end
 
 execute "-- Runnning jenkins war file" do
