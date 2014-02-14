@@ -106,7 +106,12 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-
+export PROGRAMS=$HOME/programs
 export JAVA_HOME=/home/sqat/workarea/chef/softwares/jdk1.7.0
-export PATH=$JAVA_HOME/bin:$PATH
+
+export P4PORT=10.19.24.73:1666
+export P4USER=sqatops
+export P4CLIENT=<%= @P4CLIENT%>
+export P4_HOME=$PROGRAMS/perforce
+export PATH=$JAVA_HOME/bin:$P4_HOME/bin:$PATH
 
