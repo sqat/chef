@@ -32,6 +32,8 @@ default[:apache_ivy] = "/apache-ivy-2.3.0"
 default[:perforce] = "/perforce"
 default[:build_chef] = ".chef"
 default[:build_bin] = "/workarea/chef/bin"
+default[:jdksettings] = "/usr/bin"
+
 #default[:binaries][:jdk1_6_0] = "jdk-6u43-linux-x64.bin"
 default[:binaries][:jdk1_7_0] = "jdk-7-ea-bin-b76-linux-x64-12_nov_2009.bin"
 default[:binaries][:jenkins] = "jenkins.war"
