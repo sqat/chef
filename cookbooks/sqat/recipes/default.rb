@@ -81,19 +81,19 @@ end
 execute "-- java softlink" do
   user "#{node[:system][:owner]}"
   cwd "#{node[:home]}"
-  command "sudo update-alternatives --install #{node[:jdksettings]}/java java #{node[:home]}#{node[:binaries_sqat_folder]}#{node[:binaries_java]}/java 1"
+  command "update-alternatives --install #{node[:jdksettings]}/java java #{node[:home]}#{node[:binaries_sqat_folder]}#{node[:binaries_java]}/java 1"
 end
 
 execute "-- javac softlink" do
   user "#{node[:system][:owner]}"
   cwd "#{node[:home]}"
-  command "sudo update-alternatives --install #{node[:jdksettings]}/javac javac #{node[:home]}#{node[:binaries_sqat_folder]}#{node[:binaries_java]}/javac 1"
+  command "update-alternatives --install #{node[:jdksettings]}/javac javac #{node[:home]}#{node[:binaries_sqat_folder]}#{node[:binaries_java]}/javac 1"
 end
 
 execute "-- javaws softlink" do
   user "#{node[:system][:owner]}"
   cwd "#{node[:home]}"
-  command "sudo update-alternatives --install #{node[:jdksettings]}/javaws javaws #{node[:home]}#{node[:binaries_sqat_folder]}#{node[:binaries_java]}/javaws 1"
+  command "update-alternatives --install #{node[:jdksettings]}/javaws javaws #{node[:home]}#{node[:binaries_sqat_folder]}#{node[:binaries_java]}/javaws 1"
 end
 ############## set up p4client ###################################
 
