@@ -1,6 +1,6 @@
 {
     "run_list" : [
-"recipe[sqat::buildbox]"
+"recipe[tnt27::buildbox]"
 ]
     
 }
