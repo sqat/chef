@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causes>
+        <hudson.model.Cause_-UpstreamCause>
+          <upstreamProject>wm_prd_sync</upstreamProject>
+          <upstreamUrl>job/wm_prd_sync/</upstreamUrl>
+          <upstreamBuild>153</upstreamBuild>
+          <upstreamCauses>
+            <hudson.triggers.TimerTrigger_-TimerTriggerCause/>
+          </upstreamCauses>
+        </hudson.model.Cause_-UpstreamCause>
+      </causes>
+    </hudson.model.CauseAction>
+    <jenkins.model.InterruptedBuildAction>
+      <causes class="com.google.common.collect.ImmutableList">
+        <jenkins.model.CauseOfInterruption_-UserInterruption>
+          <user>sqat</user>
+        </jenkins.model.CauseOfInterruption_-UserInterruption>
+      </causes>
+    </jenkins.model.InterruptedBuildAction>
+  </actions>
+  <number>1828</number>
+  <startTime>1386725876553</startTime>
+  <result>ABORTED</result>
+  <duration>37687911</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn>sqat-wm-mir</builtOn>
+  <workspace>/opt/usr/apps/workspace/prd_WMProductionSanitySuite</workspace>
+  <hudsonVersion>1.517</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

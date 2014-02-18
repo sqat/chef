@@ -1,0 +1,7 @@
+Started by timer
+Building remotely on [8mha:AAAAoR+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZR/eT83ILSktQi/eLCxBLd8lzd3MwiAGQ4xuTKAAAA[0msqat-wm-mir in workspace /opt/usr/apps/workspace/clearLogs_sqat-wm-mir
+[clearLogs_sqat-wm-mir] $ /bin/sh -xe /tmp/hudson4642775342034640956.sh
++ cd /opt/usr/apps/sqat/Monolith/Walmart/Mirror/logs
++ echo 
++ echo 
+Finished: SUCCESS

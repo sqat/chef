@@ -1,0 +1,7 @@
+Started by timer
+Building remotely on [8mha:AAAAoR+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZR/eT83ILSktQi/eLCxBLd8lzdotR0AM531DLKAAAA[0msqat-wm-reg in workspace /opt/usr/apps/workspace/clearLogs_sqat-wm-reg
+[clearLogs_sqat-wm-reg] $ /bin/sh -xe /tmp/hudson4487080945274981767.sh
++ cd /opt/usr/apps/sqat/Monolith/Walmart/Regression/logs
++ echo 
++ echo 
+Finished: SUCCESS
