@@ -22,5 +22,5 @@ end
 execute "-- copying wg jobs " do
   user "#{node[:system][:owner]}"  
   cwd "#{node[:home]}"
-  command "cp -r #{node[:home]}#{node[:binaries_wg_jobs]}/* #{node[:home]}#{node[:binaries_jenkins_jobs]}/"
+  command "cp -r #{node[:home]}#{node[:binaries_wm_jobs]}/* #{node[:home]}#{node[:binaries_jenkins_jobs]}/"
 end
