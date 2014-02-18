@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causes>
+        <hudson.triggers.TimerTrigger_-TimerTriggerCause/>
+        <hudson.triggers.TimerTrigger_-TimerTriggerCause/>
+      </causes>
+    </hudson.model.CauseAction>
+  </actions>
+  <number>763</number>
+  <startTime>1379397038539</startTime>
+  <result>SUCCESS</result>
+  <duration>11371098</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn>sqat-wm-mir</builtOn>
+  <workspace>/opt/usr/apps/workspace/prd_WMProductionSanitySuite</workspace>
+  <hudsonVersion>1.517</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

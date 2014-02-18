@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.CauseAction>
+      <causes>
+        <hudson.triggers.TimerTrigger_-TimerTriggerCause/>
+      </causes>
+    </hudson.model.CauseAction>
+  </actions>
+  <number>1985</number>
+  <startTime>1387951456135</startTime>
+  <result>SUCCESS</result>
+  <duration>5468004</duration>
+  <charset>UTF-8</charset>
+  <keepLog>false</keepLog>
+  <builtOn>sqat-wm-mir</builtOn>
+  <workspace>/opt/usr/apps/workspace/prd_WMProductionSanitySuite</workspace>
+  <hudsonVersion>1.517</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

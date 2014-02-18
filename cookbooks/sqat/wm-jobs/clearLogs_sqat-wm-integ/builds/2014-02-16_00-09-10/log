@@ -1,0 +1,7 @@
+Started by timer
+Building remotely on [8mha:AAAAox+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZx/eT83ILSktQi/eLCxBLd8lzdzLyS1HQAHviuqswAAAA=[0msqat-wm-integ in workspace /opt/usr/apps/workspace/clearLogs_sqat-wm-integ
+[clearLogs_sqat-wm-integ] $ /bin/sh -xe /tmp/hudson5605870953677708570.sh
++ cd /opt/usr/apps/sqat/Monolith/Walmart/Integration/logs
++ echo 
++ echo 
+Finished: SUCCESS
