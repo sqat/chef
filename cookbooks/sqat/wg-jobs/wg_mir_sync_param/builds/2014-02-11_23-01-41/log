@@ -1,0 +1,28 @@
+Started by upstream project "[8mha:AAAArh+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyZEgYl/az8JP2AovyU0uSSzPy84MS8zJLKeJfEzJzK+IDEosRcfQAbOlwM1wAAAA==[0mProductionSanity_Daily_Param" build number [8mha:AAAAsR+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzmEgZV/az8JP2AovyU0uSSzPy84MS8zJLKeJfEzJzK+IDEosRcfQsTcwBlFI0V2gAAAA==[0m847
+originally caused by:
+ Started by timer
+Building remotely on [8mha:AAAAoR+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzuEgZR/eT83ILSktQi/eLCxBLd8nTd3MwiAMUgdq7KAAAA[0msqat-wg-mir in workspace /opt/usr/apps/workspace/wg_mir_sync_param
+[wg_mir_sync_param] $ /bin/sh -xe /tmp/hudson6996671527710425943.sh
++ p4 sync -f //depot/sqat/Mirror/*.jar
+//depot/sqat/Mirror/DBdataFillingModule.jar#34 - refreshing /opt/usr/apps/sqat/Monolith/Walgreens/Mirror/DBdataFillingModule.jar
+//depot/sqat/Mirror/DBmodule.jar#34 - refreshing /opt/usr/apps/sqat/Monolith/Walgreens/Mirror/DBmodule.jar
+//depot/sqat/Mirror/EmailPoolingModule.jar#34 - refreshing /opt/usr/apps/sqat/Monolith/Walgreens/Mirror/EmailPoolingModule.jar
+//depot/sqat/Mirror/SocketClient.jar#34 - refreshing /opt/usr/apps/sqat/Monolith/Walgreens/Mirror/SocketClient.jar
+//depot/sqat/Mirror/SocketServer.jar#34 - refreshing /opt/usr/apps/sqat/Monolith/Walgreens/Mirror/SocketServer.jar
+//depot/sqat/Mirror/framework.jar#57 - refreshing /opt/usr/apps/sqat/Monolith/Walgreens/Mirror/framework.jar
+//depot/sqat/Mirror/snapfish-logging.jar#21 - refreshing /opt/usr/apps/sqat/Monolith/Walgreens/Mirror/snapfish-logging.jar
+//depot/sqat/Mirror/testcase-xmltypes.jar#57 - refreshing /opt/usr/apps/sqat/Monolith/Walgreens/Mirror/testcase-xmltypes.jar
++ p4 sync -f //depot/sqat/Mirror/*.xml
+//depot/sqat/Mirror/hibernate.cfg.xml#4 - refreshing /opt/usr/apps/sqat/Monolith/Walgreens/Mirror/hibernate.cfg.xml
+//depot/sqat/Mirror/integhibernate.cfg.xml#2 - refreshing /opt/usr/apps/sqat/Monolith/Walgreens/Mirror/integhibernate.cfg.xml
+//depot/sqat/Mirror/log4j.xml#3 - refreshing /opt/usr/apps/sqat/Monolith/Walgreens/Mirror/log4j.xml
+//depot/sqat/Mirror/mirhibernate.cfg.xml#1 - refreshing /opt/usr/apps/sqat/Monolith/Walgreens/Mirror/mirhibernate.cfg.xml
+//depot/sqat/Mirror/reghibernate.cfg.xml#1 - refreshing /opt/usr/apps/sqat/Monolith/Walgreens/Mirror/reghibernate.cfg.xml
++ p4 sync -f //depot/sqat/Mirror/*.properties
+//depot/sqat/Mirror/*.properties - file(s) not in client view.
++ p4 sync //depot/sqat/Mirror/lib/...
+//depot/sqat/Mirror/lib/... - file(s) up-to-date.
++ p4 sync -f //depot/sqat/Monolith/walgreens/Mirror/...
+//depot/sqat/Monolith/walgreens/Mirror/... - file(s) not in client view.
+[8mha:AAAAph+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyREgYp/az8JP2CopT4cPeAopTgxLzMksrg0sySVH0A08cPac8AAAA=[0mprd_WGPrdSanitySuite #2186 is already in the queue
+Finished: SUCCESS

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties/>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>sqat-wg-integ</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector"/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>p4 sync -f //depot/sqat/Integration/*.jar
+p4 sync -f //depot/sqat/Integration/*.xml
+p4 sync -f //depot/sqat/Integration/*.properties
+p4 sync //depot/sqat/Integration/lib/...
+p4 sync -f //depot/sqat/Monolith/Walgreens/Integration/...</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.BuildTrigger>
+      <childProjects>integ_WGSuiteSet1, integ_LoginAndRegistrationSuite, integ_SofiAndSharingSuite, integ_RegularProductsSuite, integ_BooksSuite, integ_CalendarsSuite, integ_CardsSuite, integ_CollageGiftsSuite, integ_GiftsSuite, integ_PostersSuite, integ_PrintsSuite</childProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+      </threshold>
+    </hudson.tasks.BuildTrigger>
+  </publishers>
+  <buildWrappers/>
+</project>

@@ -1,0 +1,147 @@
+Started by timer
+Building remotely on [8mha:AAAAox+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzeEgZx/eT83ILSktQi/eLCxBLdpNLMnJSk/AoAKwgclswAAAA=[0msqat-buildbox in workspace /opt/usr/apps/workspace/ProductionSanity_Daily_Param
+[ProductionSanity_Daily_Param] $ /bin/sh -xe /tmp/hudson3932764402303039169.sh
++ cd /opt/usr/apps/source/Mirror/bin
++ p4 sync /opt/usr/apps/source/Mirror/bin/...
+/opt/usr/apps/source/Mirror/bin/... - file(s) up-to-date.
++ export JAVA_HOME=/opt/usr/apps/jre1.7/
++ ant -f db.xml current -Dhostname=sqat-postgres-mir -Dport=5433 -Dusername=sqat -Ddbname=sqatdb
+Unable to locate tools.jar. Expected to find it in /opt/usr/apps/jre1.7/lib/tools.jar
+Buildfile: /opt/usr/apps/source/Mirror/bin/db.xml
+
+current:
+
+run:
+     [echo] Running script update.sql as sqat
+     [exec] CREATE TABLE
+     [exec] CREATE TABLE
+     [exec] CREATE TABLE
+     [exec] CREATE TABLE
+     [exec] CREATE TABLE
+     [exec] CREATE TABLE
+     [exec] psql:update.sql:6: NOTICE:  relation "test_suite" already exists, skipping
+     [exec] psql:update.sql:14: NOTICE:  relation "test_plan" already exists, skipping
+     [exec] psql:update.sql:24: NOTICE:  relation "test_case" already exists, skipping
+     [exec] psql:update.sql:39: NOTICE:  relation "test_suite_executed" already exists, skipping
+     [exec] psql:update.sql:53: NOTICE:  relation "test_plan_executed" already exists, skipping
+     [exec] psql:update.sql:70: NOTICE:  relation "test_case_executed" already exists, skipping
+
+run:
+     [echo] Running script update.sql as sqat
+     [exec]   Sprint2   
+     [exec] ------------
+     [exec]  2014-03-01
+     [exec] (1 row)
+     [exec] 
+     [exec]  Result 
+     [exec] --------
+     [exec]       4
+     [exec] (1 row)
+     [exec] 
+
+run:
+     [echo] Running script create.sql as sqat
+     [exec] CREATE TABLE
+     [exec] psql:create.sql:8: NOTICE:  relation "email_pool" already exists, skipping
+     [echo] Running script insert.sql as sqat
+     [exec] INSERT 0 1
+     [exec] INSERT 0 1
+     [exec] INSERT 0 1
+     [exec] INSERT 0 1
+     [exec] INSERT 0 1
+     [exec] INSERT 0 1
+     [exec] INSERT 0 1
+     [exec] INSERT 0 1
+     [exec] INSERT 0 1
+     [exec] INSERT 0 1
+
+run:
+     [echo] Running script update.sql as sqat
+     [exec] psql:update.sql:2: ERROR:  column "browser" of relation "test_plan_executed" does not exist
+     [exec] psql:update.sql:5: ERROR:  column "browser" of relation "test_case_executed" already exists
+     [exec] psql:update.sql:13: ERROR:  relation "email_pool" already exists
+
+run:
+     [echo] Running script update.sql as sqat
+     [exec] psql:update.sql:3: ERROR:  column "subscriber" of relation "test_suite" already exists
+
+run:
+     [echo] Running script update.sql as sqat
+     [exec] ALTER TABLE
+     [exec] ALTER TABLE
+     [exec] ALTER TABLE
+     [exec] ALTER TABLE
+     [exec] psql:update.sql:4: ERROR:  column "jenkins_build_number" of relation "test_suite_executed" already exists
+     [exec] psql:update.sql:7: ERROR:  column "executedbranch" of relation "test_suite_executed" already exists
+     [exec] psql:update.sql:10: ERROR:  relation "hibernate_sequence" already exists
+
+run:
+     [echo] Running script update.sql as sqat
+     [exec] CREATE TABLE
+     [exec] psql:update.sql:7: NOTICE:  relation "manual_test_inputs" already exists, skipping
+
+run:
+     [echo] Running script update.sql as sqat
+     [exec] psql:update.sql:4: ERROR:  constraint "test_suite_suite_name_key" of relation "test_suite" does not exist
+
+run:
+     [echo] Running script update.sql as sqat
+     [exec] psql:update.sql:2: ERROR:  column "manula_input_value" does not exist
+
+run:
+     [echo] Running script update.sql as sqat
+     [exec] ALTER TABLE
+     [exec] ALTER TABLE
+     [exec] ALTER TABLE
+
+run:
+     [echo] Running script update.sql as sqat
+     [exec] psql:update.sql:1: ERROR:  column "cobrand" of relation "email_pool" already exists
+
+run:
+     [echo] Running script update.sql as sqat
+     [exec] ALTER TABLE
+     [exec] ALTER TABLE
+     [exec] ALTER TABLE
+     [exec] ALTER TABLE
+     [exec] ALTER TABLE
+     [exec] ALTER TABLE
+     [exec] ALTER TABLE
+     [exec] ALTER TABLE
+     [exec] ALTER TABLE
+     [exec] ALTER TABLE
+     [exec] ALTER TABLE
+     [exec] psql:update.sql:89: ERROR:  relation "test_plan_test_suite_id_index" already exists
+     [exec] psql:update.sql:90: ERROR:  relation "test_case_test_suite_id_index" already exists
+     [exec] ALTER TABLE
+     [exec] psql:update.sql:91: ERROR:  relation "test_case_test_plan_id_index" already exists
+     [exec] psql:update.sql:92: ERROR:  relation "test_suite_executed_test_suite_id_index" already exists
+     [exec] psql:update.sql:93: ERROR:  relation "test_plan_executed_test_plan_id_index" already exists
+     [exec] psql:update.sql:94: ERROR:  relation "test_plan_executed_test_suite_executed_id_index" already exists
+     [exec] psql:update.sql:95: ERROR:  relation "test_plan_executed_test_suite_id_index" already exists
+     [exec] psql:update.sql:96: ERROR:  relation "test_case_executed_test_case_id_index" already exists
+     [exec] psql:update.sql:97: ERROR:  relation "test_case_executed_test_plan_executed_id_index" already exists
+     [exec] psql:update.sql:98: ERROR:  relation "test_case_executed_test_plan_id_index" already exists
+     [exec] psql:update.sql:99: ERROR:  relation "test_case_executed_test_suite_executed_id_index" already exists
+     [exec] psql:update.sql:100: ERROR:  relation "test_case_executed_test_suite_id_index" already exists
+
+run:
+     [echo] Running script update.sql as sqat
+     [exec] psql:update.sql:1: ERROR:  relation "test_suite_executed_starttime_index" already exists
+     [exec] psql:update.sql:2: ERROR:  relation "test_case_executed_starttime_index" already exists
+
+run:
+     [echo] Running script update.sql as sqat
+     [exec] psql:update.sql:2: ERROR:  column "snapcat_host" of relation "test_case_executed" already exists
+     [exec] psql:update.sql:5: ERROR:  column "email_id_used" of relation "test_case_executed" already exists
+
+run:
+     [echo] Running script update.sql as sqat
+     [exec] ALTER TABLE
+     [exec] ALTER TABLE
+     [exec] psql:update.sql:8: ERROR:  column "total_testcases_count" of relation "test_plan_executed" already exists
+
+BUILD SUCCESSFUL
+Total time: 15 seconds
+Triggering a new build of [8mha:AAAAox+LCAAAAAAAAABb85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzBEgZx/az8JP3y9PjczKL44sq85PiCxKLEXH0A5iJhSswAAAA=[0mwg_mir_sync_param #870
+Finished: SUCCESS
