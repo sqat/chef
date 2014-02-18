@@ -19,7 +19,7 @@ execute "-- Runnning jenkins war file" do
   command "nohup #{node[:home]}#{node[:binaries_sqat_folder]}#{node[:binaries_java]}/java -jar #{node[:home]}#{node[:binaries_sqat_folder]}/#{node[:binaries][:jenkins]}  &"
 end
 
-execute "-- copying wg jobs " do
+execute "-- copying wm jobs " do
   user "#{node[:system][:owner]}"  
   cwd "#{node[:home]}"
   command "cp -r #{node[:home]}#{node[:binaries_wm_jobs]}/* #{node[:home]}#{node[:binaries_jenkins_jobs]}/"
