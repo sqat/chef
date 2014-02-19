@@ -143,11 +143,6 @@ elsif workarea.eql?("grid")
     :HOST => "#{node[:system][:host]}",
   )
 end
-execute "-- Runnning server" do
-  user "#{node[:system][:owner]}"
-  cwd "#{node[:workspace]}#{node[:seleniumserver]}"
-  command "nohup #{node[:home]}#{node[:binaries_sqat_folder]}#{node[:binaries_java]}/java -jar #{node[:workspace]}#{node[:seleniumserver]}/selenium-server-standalone-2.x.jar -role hub  -timeout 7200 -browserTimeout 7200 -WARN -ERROR 2>&1 &"
-end
 
 else
   puts "No p4client template taken" 
@@ -186,4 +181,11 @@ code <<-EOH
 EOH
 end
 
+if workarea.eql?("grid")
+execute "-- Runnning server" do
+  user "#{node[:system][:owner]}"
+  cwd "#{node[:workspace]}#{node[:seleniumserver]}"
+  command "nohup #{node[:home]}#{node[:binaries_sqat_folder]}#{node[:binaries_java]}/java -jar #{node[:workspace]}#{node[:seleniumserver]}/selenium-server-standalone-2.x.jar -role hub  -timeout 7200 -browserTimeout 7200 -WARN -ERROR 2>&1 &"
+end
+end
 
