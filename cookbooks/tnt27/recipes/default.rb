@@ -72,12 +72,13 @@ template "#{node[:home]}/.bashrc" do
   )
 end
 
+=begin
 bash "-- source bashrc" do
   user "#{node[:system][:owner]}"
   cwd "#{node[:home]}"
   code "source #{node[:home]}/.bashrc"
 end
-
+=end
 
 ############## set up p4client ###################################
 
