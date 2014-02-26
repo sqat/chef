@@ -143,6 +143,23 @@ elsif workarea.eql?("grid")
     :HOST => "#{node[:system][:host]}",
   )
 end
+elsif workarea.eql?("buildbox") 
+  puts "picking buildbox_p4client"
+
+  template "#{node[:workspace]}/p4client.txt" do
+  owner "#{node[:system][:owner]}"
+  user "#{node[:system][:owner]}"
+  mode "0644"
+  source "buildbox_p4client.erb"
+  variables(
+    :P4CLIENT => node[:p4settings][:P4CLIENT],
+    :WORKSPACE => "#{node[:workspace]}",
+    :P4USER => node[:p4settings][:P4USER],
+    :HOST => "#{node[:system][:host]}",
+  )
+end
+
+
 
 else
   puts "No p4client template taken" 
