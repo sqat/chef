@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>execute Walgreens Regression gifts suite in regression window at 3.30AM PST</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.security.AuthorizationMatrixProperty>
+      <permission>hudson.model.Item.Configure:naveendnr</permission>
+      <permission>hudson.model.Item.Build:naveendnr</permission>
+      <permission>hudson.model.Item.Read:naveendnr</permission>
+      <permission>hudson.model.Item.Cancel:naveendnr</permission>
+    </hudson.security.AuthorizationMatrixProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>sqat-wg-reg</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>true</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector">
+    <hudson.triggers.TimerTrigger>
+      <spec>H 15 * * *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>p4 sync //depot/sqat/...
+cd /opt/usr/apps/sqat/Monolith/Walgreens/Regression
+java -DsysConfig=wg_reg_config.properties -Denv=stg4 -Dtest_suit=gifts_suite.xml -DemailConfig=gifts_suite_emailpool.properties -jar framework.jar</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

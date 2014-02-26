@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>execute Walgreens Regression login and registration suite on Stg8.</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.security.AuthorizationMatrixProperty>
+      <permission>hudson.model.Item.Build:naveendnr</permission>
+      <permission>hudson.model.Item.Cancel:naveendnr</permission>
+      <permission>hudson.model.Item.Configure:naveendnr</permission>
+      <permission>hudson.model.Item.Read:naveendnr</permission>
+    </hudson.security.AuthorizationMatrixProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <assignedNode>sqat-wg-integ</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>true</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers class="vector">
+    <hudson.triggers.TimerTrigger>
+      <spec>0 7 * * *</spec>
+    </hudson.triggers.TimerTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>p4 sync //depot/sqat/...
+cd /opt/usr/apps/sqat/Monolith/Walgreens/Integration
+java -DsysConfig=wg_integ_config.properties -Denv=stg8 -Dtest_suit=regular_products_suite.xml -DemailConfig=regproducts_emailpool.properties -jar framework.jar</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
