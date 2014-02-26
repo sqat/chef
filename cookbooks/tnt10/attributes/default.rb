@@ -31,7 +31,7 @@ default[:apache_ant] = "/apache-ant-1.9.0"
 default[:apache_ivy] = "/apache-ivy-2.3.0"
 default[:perforce] = "/perforce"
 default[:build_chef] = ".chef"
-default[:build_bin] = "/workarea/chef/bin"
+default[:build_bin] = "/workarea/chef/bin/tnt10"
 default[:jdksettings] = "/usr/bin"
 
 #default[:binaries][:jdk1_6_0] = "jdk-6u43-linux-x64.bin"
