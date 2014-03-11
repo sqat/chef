@@ -6,7 +6,7 @@ default[:system][:host] = "sqat-core-sotfservice"
 default[:system][:email] = "your-email@domain.com"
 
 default[:p4settings][:P4USER] = "tenant10"
-default[:p4settings][:P4PORT] = "op1-sfdeploy2.mah3.sfo2.snapfish.com:1666"
+default[:p4settings][:P4PORT] = "*******"
 default[:p4settings][:P4CLIENT] = "sqat-core-sotfservice.tnt10"
 default[:p4settings][:P4MERGE] = "/usr/bin/p4merge"
 
