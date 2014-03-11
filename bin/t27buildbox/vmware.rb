@@ -116,5 +116,5 @@ VmWare.new.runCommand
 
 
 
-#example : ruby vmware.rb --host vcenter1.op-zone1.aus1 --user gatadi --password passord --insecure --datacenter MP1 off devbox1.tnt13-zone1.aus1 tenant13/test
+#example : ruby vmware.rb --host ****** --user gatadi --password passord --insecure --datacenter MP1 off devbox1.tnt13-zone1.aus1 tenant13/test
  
