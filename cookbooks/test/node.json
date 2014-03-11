@@ -7,12 +7,12 @@
       "user" : "gatadi",
       "owner" : "gatadi",
       "host" : "devbox2",
-      "email" : "vijay.gatadi@hp.com"
+      "email" : "****"
     },
     
     "p4settings" : {
-      "P4PORT" : "op1-sfdeploy2.mah3.sfo2.snapfish.com:1666",
-      "P4CLIENT" : "devbox2.tnt13-zone1.aus1",
+      "P4PORT" : "******",
+      "P4CLIENT" : "*****",
       "P4USER" : "gatadi",
       "P4MERGE" : "/usr/bin/p4merge"
     },
@@ -34,7 +34,7 @@
     },
 
     "ivy" : {
-       "REPO_SERVER" : "op2-ivy1.hpd5.aus1.snapfish.com",
+       "REPO_SERVER" : "*****",
        "IVY_PORT" : "7443"
     },
     
