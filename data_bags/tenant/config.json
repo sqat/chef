@@ -13,7 +13,7 @@
     "rotate"
   ],
   "vcenter": {
-    "host": "vcenter1.op-zone1.aus1",  //austin vcenter host, if you use sfo vcenter change this
+    "host": "******",  //austin vcenter host, if you use sfo vcenter change this
     "user": "",   //tenant user   
     "password": "",   //tenant password
     "dc": "MP1",  // if you use SFO tenant, make sure vcenter data center is updated. 
