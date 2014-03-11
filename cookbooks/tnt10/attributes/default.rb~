@@ -11,7 +11,7 @@ default[:p4settings][:P4CLIENT] = "sqat-core-sotfservice.tnt10"
 default[:p4settings][:P4MERGE] = "/usr/bin/p4merge"
 
 
-default[:ldap][:LDAP_USER] = "tenant10"
+default[:ldap][:LDAP_USER] = "******"
 default[:ldap][:LDAP_PASSWD] = "your-ldap-password"
 
 default[:temp] = "/Temp"
