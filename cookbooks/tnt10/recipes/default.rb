@@ -2,7 +2,7 @@
 require 'socket'
 host=Socket.gethostname
 node.default["system"]["host"]=host
-node.default["p4settings"]["P4CLIENT"]=host+".tnt26"
+node.default["p4settings"]["P4CLIENT"]=host+".tnt10"
 elements=host.split(/\-/)
 workarea=elements[1]
 puts "host: #{host},workarea: #{workarea}"
@@ -80,10 +80,9 @@ bash "-- source bashrc" do
 end
 =end
 
-
 ############## set up p4client ###################################
 
-if workarea.eql?("snapfish")
+if workarea.eql?("core")
   puts "picking snapfish_p4client"
 
   template "#{node[:workspace]}/p4client.txt" do
@@ -143,33 +142,6 @@ elsif workarea.eql?("grid")
     :HOST => "#{node[:system][:host]}",
   )
 end
-elsif workarea.eql?("buildbox") 
-  puts "picking buildbox_p4client"
-
-  template "#{node[:workspace]}/p4client.txt" do
-  owner "#{node[:system][:owner]}"
-  user "#{node[:system][:owner]}"
-  mode "0644"
-  source "buildbox_p4client.erb"
-  variables(
-    :P4CLIENT => node[:p4settings][:P4CLIENT],
-    :WORKSPACE => "#{node[:workspace]}",
-    :P4USER => node[:p4settings][:P4USER],
-    :HOST => "#{node[:system][:host]}",
-  )
-end
-
-execute "-- creating .chef folder " do
-  user "#{node[:system][:owner]}"
-  cwd "#{node[:home]}"
-  command "mkdir #{node[:home]}/#{node[:build_chef]}"
-end
-
-execute "-- copying files " do
-  user "#{node[:system][:owner]}"
-  cwd "#{node[:home]}/#{node[:build_chef]}"
-  command "cp -a #{node[:home]}#{node[:build_bin]}/knife.rb #{node[:home]}#{node[:build_bin]}/vmware.sh #{node[:home]}#{node[:build_bin]}/vmware.rb #{node[:home]}/#{node[:build_chef]}/"
-end
 
 else
   puts "No p4client template taken" 
@@ -201,12 +173,14 @@ ruby_block "p4login" do
  end
 end
 
+=begin
 script "copy p4 ticket" do
 interpreter "bash"
 code <<-EOH
  cp /root/.p4tickets /home/sqat/.p4tickets
 EOH
 end
+=end
 
 if workarea.eql?("grid")
 execute "-- Runnning server" do
@@ -215,4 +189,3 @@ execute "-- Runnning server" do
   command "nohup #{node[:home]}#{node[:binaries_sqat_folder]}#{node[:binaries_java]}/java -jar #{node[:workspace]}#{node[:seleniumserver]}/selenium-server-standalone-2.x.jar -role hub  -timeout 7200 -browserTimeout 7200 -WARN -ERROR 2>&1 &"
 end
 end
-
