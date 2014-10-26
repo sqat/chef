@@ -68,17 +68,18 @@ template "#{node[:home]}/.bashrc" do
   mode "0644"
   source "bashrc.erb"
   variables(
-    :P4CLIENT => node[:p4settings][:P4CLIENT]
+    :P4CLIENT => node[:p4settings][:P4CLIENT],
+    :P4USER => node[:p4settings][:P4USER],
+    :P4PORT => node[:p4settings][:P4PORT],
   )
 end
 
-=begin
 bash "-- source bashrc" do
   user "#{node[:system][:owner]}"
   cwd "#{node[:home]}"
   code "source #{node[:home]}/.bashrc"
 end
-=end
+
 
 ############## set up p4client ###################################
 
