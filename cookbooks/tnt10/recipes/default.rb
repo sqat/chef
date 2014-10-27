@@ -98,6 +98,21 @@ if workarea.eql?("core")
     :HOST => "#{node[:system][:host]}",
   )
 end
+elsif workarea.eql?("i18n") 
+  puts "picking sf_i18n_p4client"
+
+  template "#{node[:workspace]}/p4client.txt" do
+  owner "#{node[:system][:owner]}"
+  user "#{node[:system][:owner]}"
+  mode "0644"
+  source "sf_i18n_p4client.erb"
+  variables(
+    :P4CLIENT => node[:p4settings][:P4CLIENT],
+    :WORKSPACE => "#{node[:workspace]}",
+    :P4USER => node[:p4settings][:P4USER],
+    :HOST => "#{node[:system][:host]}",
+  )
+end
 elsif workarea.eql?("walmart") 
   puts "picking walmart_p4client"
 
